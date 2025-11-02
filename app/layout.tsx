@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { GithubIcon, XIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +27,78 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="relative flex min-h-screen flex-col overflow-hidden bg-secondary/40 supports-[overflow:clip]:overflow-clip dark:bg-background">
+          <header className="border-b border-dashed bg-card dark:bg-card/50">
+            <div className="cpx container flex h-14 items-center justify-between py-2">
+              <Link
+                className="cursor-pointer rounded-md border border-dashed p-2 hover:bg-accent"
+                href="/"
+              >
+                <span className="font-medium">Site</span>
+              </Link>
+              <div className="flex items-center gap-2">
+                <Button
+                  render={
+                    <Link
+                      aria-label="x/twitter"
+                      href={`https://x.com`}
+                      target="_blank"
+                    />
+                  }
+                  size="icon-sm"
+                  variant="outline"
+                >
+                  <XIcon />
+                </Button>
+                <Button
+                  render={
+                    <Link
+                      aria-label="github"
+                      href={`https://github.com/efferd-ui`}
+                      target="_blank"
+                    />
+                  }
+                  size="icon-sm"
+                  variant="outline"
+                >
+                  <GithubIcon />
+                </Button>
+              </div>
+            </div>
+          </header>
+          <main
+            className={cn(
+              "container relative grow",
+              "before:-inset-y-20 before:-left-px before:absolute before:z-1 before:border-border before:border-dashed xl:before:border-l",
+              "after:-inset-y-20 after:-right-px after:absolute after:z-1 after:border-border after:border-dashed xl:after:border-r"
+            )}
+          >
+            {children}
+          </main>
+          <footer className="border-t border-dashed bg-card dark:bg-card/50">
+            <div className="cpx container flex items-center justify-between py-6 text-xs md:text-sm">
+              <p className="flex items-center gap-1 text-muted-foreground">
+                <span>Built by</span>
+                <Link
+                  aria-label="x/twitter"
+                  className="font-medium text-foreground/90 hover:text-foreground hover:underline"
+                  href={`https://x.com`}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Shaban
+                </Link>
+              </p>
+              <p className="text-muted-foreground">
+                &copy; {new Date().getFullYear()} Site
+              </p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
