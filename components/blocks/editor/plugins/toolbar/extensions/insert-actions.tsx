@@ -2,7 +2,7 @@ import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext
 import { INSERT_HORIZONTAL_RULE_COMMAND } from "@lexical/react/LexicalHorizontalRuleNode";
 import { Minus, Plus, Table, ImageIcon } from "lucide-react";
 import { Menu, MenuPopup, MenuItem, MenuTrigger } from "@/components/ui/menu";
-import { ToolbarButton } from "@/components/editor/plugins/toolbar/extensions/toolbar-button";
+import { ToolbarButton } from "@/components/blocks/editor/plugins/toolbar/extensions/toolbar-button";
 
 export function InsertDropDown({
   setShowTableDialog,

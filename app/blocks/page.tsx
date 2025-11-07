@@ -2,7 +2,7 @@ import {
   BorderSeparator,
   FixedBorderSeparator,
 } from "@/components/ui/border-separator";
-import { Editor } from "@/components/editor";
+import { Editor } from "@/components/blocks/editor";
 import { CopyButton } from "./copy-button";
 
 export default function Home() {

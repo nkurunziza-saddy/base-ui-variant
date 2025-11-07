@@ -14,7 +14,7 @@ import { Palette } from "lucide-react";
 
 import { Menu, MenuPopup, MenuItem, MenuTrigger } from "@/components/ui/menu";
 import { FONT_COLORS } from "../../../lib/colors";
-import { ToolbarButton } from "@/components/editor/plugins/toolbar/extensions/toolbar-button";
+import { ToolbarButton } from "@/components/blocks/editor/plugins/toolbar/extensions/toolbar-button";
 
 export function ColorPicker({
   editor,

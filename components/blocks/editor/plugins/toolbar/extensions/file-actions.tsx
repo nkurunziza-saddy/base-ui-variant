@@ -10,7 +10,7 @@ import {
   copyAsPlainText,
   importMarkdown,
 } from "../../../lib/utils";
-import { ToolbarButton } from "@/components/editor/plugins/toolbar/extensions/toolbar-button";
+import { ToolbarButton } from "@/components/blocks/editor/plugins/toolbar/extensions/toolbar-button";
 
 export function FileActions() {
   const [editor] = useLexicalComposerContext();

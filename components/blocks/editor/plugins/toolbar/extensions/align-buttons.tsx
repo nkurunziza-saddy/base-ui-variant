@@ -4,7 +4,7 @@ import { FORMAT_ELEMENT_COMMAND } from "lexical";
 import { AlignLeft, AlignCenter, AlignRight, AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Menu, MenuPopup, MenuItem, MenuTrigger } from "@/components/ui/menu";
-import { ToolbarButton } from "@/components/editor/plugins/toolbar/extensions/toolbar-button";
+import { ToolbarButton } from "@/components/blocks/editor/plugins/toolbar/extensions/toolbar-button";
 
 export function AlignButtons() {
   const [editor] = useLexicalComposerContext();
