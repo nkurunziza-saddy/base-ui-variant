@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Card,
-  CardContent,
+  CardPanel,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -16,8 +16,8 @@ import { Slider } from "@/components/ui/slider";
 import { RadioGroup, Radio } from "@/components/ui/radio-group";
 import {
   Select,
-  SelectContent,
   SelectItem,
+  SelectPopup,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -36,11 +36,26 @@ import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState } from "react";
+import { ComponentCard } from "./component-card";
+import { Label } from "@/components/ui/label";
+import {
+  Menu,
+  MenuCheckboxItem,
+  MenuGroup,
+  MenuGroupLabel,
+  MenuItem,
+  MenuPopup,
+  MenuRadioGroup,
+  MenuRadioItem,
+  MenuSeparator,
+  MenuSub,
+  MenuSubPopup,
+  MenuSubTrigger,
+  MenuTrigger,
+} from "@/components/ui/menu";
 
 export default function Home() {
   const [sliderValue, setSliderValue] = useState([50]);
-  const [radioValue, setRadioValue] = useState("option1");
-  const [selectValue, setSelectValue] = useState("");
   const [checkboxValue, setCheckboxValue] = useState(false);
   const [switchValue, setSwitchValue] = useState(false);
 
@@ -48,43 +63,59 @@ export default function Home() {
     setSliderValue(Array.isArray(value) ? value : [value]);
   };
 
-  const handleRadioChange = (value: unknown) => {
-    setRadioValue(value as string);
-  };
-
   const components = [
     {
       id: "button",
       name: "Button",
-      command: "pnpm dlx shadcn@latest add @coss/button",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/button",
+        yarn: "yarn dlx shadcn@latest add @coss/button",
+        npm: "npx shadcn@latest add @coss/button",
+        bun: "bun dlx shadcn@latest add @coss/button",
+      },
       example: <Button>Click me</Button>,
     },
     {
       id: "input",
       name: "Input",
-      command: "pnpm dlx shadcn@latest add @coss/input",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/input",
+        yarn: "yarn dlx shadcn@latest add @coss/input",
+        npm: "npx shadcn@latest add @coss/input",
+        bun: "bun dlx shadcn@latest add @coss/input",
+      },
       example: <Input placeholder="Enter text..." />,
     },
     {
       id: "card",
       name: "Card",
-      command: "pnpm dlx shadcn@latest add @coss/card",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/card",
+        yarn: "yarn dlx shadcn@latest add @coss/card",
+        npm: "npx shadcn@latest add @coss/card",
+        bun: "bun dlx shadcn@latest add @coss/card",
+      },
       example: (
-        <Card className="w-48">
+        <Card>
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
             <CardDescription>Card description</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardPanel>
             <p className="text-sm">Card content goes here.</p>
-          </CardContent>
+          </CardPanel>
         </Card>
       ),
     },
     {
       id: "checkbox",
       name: "Checkbox",
-      command: "pnpm dlx shadcn@latest add @coss/checkbox",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/checkbox",
+        yarn: "yarn dlx shadcn@latest add @coss/checkbox",
+        npm: "npx shadcn@latest add @coss/checkbox",
+        bun: "bun dlx shadcn@latest add @coss/checkbox",
+      },
       example: (
         <Checkbox checked={checkboxValue} onCheckedChange={setCheckboxValue} />
       ),
@@ -92,7 +123,12 @@ export default function Home() {
     {
       id: "switch",
       name: "Switch",
-      command: "pnpm dlx shadcn@latest add @coss/switch",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/switch",
+        yarn: "yarn dlx shadcn@latest add @coss/switch",
+        npm: "npx shadcn@latest add @coss/switch",
+        bun: "bun dlx shadcn@latest add @coss/switch",
+      },
       example: (
         <Switch checked={switchValue} onCheckedChange={setSwitchValue} />
       ),
@@ -100,7 +136,12 @@ export default function Home() {
     {
       id: "slider",
       name: "Slider",
-      command: "pnpm dlx shadcn@latest add @coss/slider",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/slider",
+        yarn: "yarn dlx shadcn@latest add @coss/slider",
+        npm: "npx shadcn@latest add @coss/slider",
+        bun: "bun dlx shadcn@latest add @coss/slider",
+      },
       example: (
         <Slider
           value={sliderValue}
@@ -112,48 +153,102 @@ export default function Home() {
     {
       id: "radio-group",
       name: "Radio Group",
-      command: "pnpm dlx shadcn@latest add @coss/radio-group",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/radio-group",
+        yarn: "yarn dlx shadcn@latest add @coss/radio-group",
+        npm: "npx shadcn@latest add @coss/radio-group",
+        bun: "bun dlx shadcn@latest add @cos/radio-group",
+      },
       example: (
-        <RadioGroup value={radioValue} onValueChange={handleRadioChange}>
-          <div className="flex items-center space-x-2">
-            <Radio value="option1" id="r1" />
-            <label htmlFor="r1">Option 1</label>
-          </div>
+        <RadioGroup defaultValue="next">
+          <Label>
+            <Radio value="next" /> Next.js
+          </Label>
+          <Label>
+            <Radio value="vite" /> Vite
+          </Label>
+          <Label>
+            <Radio value="astro" /> Astro
+          </Label>
         </RadioGroup>
       ),
     },
     {
       id: "select",
       name: "Select",
-      command: "pnpm dlx shadcn@latest add @coss/select",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/select",
+        yarn: "yarn dlx shadcn@latest add @coss/select",
+        npm: "npx shadcn@latest add @coss/select",
+        bun: "bun dlx shadcn@latest add @coss/select",
+      },
       example: (
-        <Select value={selectValue} onValueChange={setSelectValue}>
-          <SelectTrigger className="w-32">
+        <Select
+          items={[
+            { label: "Select framework", value: null },
+            { label: "Next.js", value: "next" },
+            { label: "Vite", value: "vite" },
+            { label: "Astro", value: "astro" },
+          ]}
+        >
+          <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="option1">Option 1</SelectItem>
-            <SelectItem value="option2">Option 2</SelectItem>
-          </SelectContent>
+          <SelectPopup>
+            {[
+              { label: "Select framework", value: null },
+              { label: "Next.js", value: "next" },
+              { label: "Vite", value: "vite" },
+              { label: "Astro", value: "astro" },
+            ].map((item) => (
+              <SelectItem key={item.value} value={item}>
+                {item.label}
+              </SelectItem>
+            ))}
+          </SelectPopup>
         </Select>
       ),
     },
     {
       id: "textarea",
       name: "Textarea",
-      command: "pnpm dlx shadcn@latest add @coss/textarea",
-      example: <Textarea className="w-32 h-20" />,
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/textarea",
+        yarn: "yarn dlx shadcn@latest add @coss/textarea",
+        npm: "npx shadcn@latest add @coss/textarea",
+        bun: "bun dlx shadcn@latest add @coss/textarea",
+      },
+      example: <Textarea />,
     },
     {
       id: "badge",
       name: "Badge",
-      command: "pnpm dlx shadcn@latest add @coss/badge",
-      example: <Badge>Badge</Badge>,
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/badge",
+        yarn: "yarn dlx shadcn@latest add @coss/badge",
+        npm: "npx shadcn@latest add @coss/badge",
+        bun: "bun dlx shadcn@latest add @coss/badge",
+      },
+      example: (
+        <div className="grid grid-cols-3 gap-2">
+          <Badge>Badge</Badge>
+          <Badge variant={"warning"}>Warning</Badge>
+          <Badge variant={"error"}>Error</Badge>
+          <Badge variant={"info"}>Info</Badge>
+          <Badge variant={"secondary"}>Secondary</Badge>
+          <Badge variant={"success"}>Success</Badge>
+        </div>
+      ),
     },
     {
       id: "avatar",
       name: "Avatar",
-      command: "pnpm dlx shadcn@latest add @coss/avatar",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/avatar",
+        yarn: "yarn dlx shadcn@latest add @coss/avatar",
+        npm: "npx shadcn@latest add @coss/avatar",
+        bun: "bun dlx shadcn@latest add @coss/avatar",
+      },
       example: (
         <Avatar>
           <AvatarImage src="/placeholder-avatar.jpg" />
@@ -162,40 +257,116 @@ export default function Home() {
       ),
     },
     {
+      id: "menu",
+      name: "Menu",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/menu",
+        yarn: "yarn dlx shadcn@latest add @coss/menu",
+        npm: "npx shadcn@latest add @coss/menu",
+        bun: "bun dlx shadcn@latest add @coss/menu",
+      },
+      example: (
+        <Menu>
+          <MenuTrigger>Open</MenuTrigger>
+          <MenuPopup align="start" sideOffset={4}>
+            <MenuItem>Profile</MenuItem>
+            <MenuSeparator />
+
+            <MenuGroup>
+              <MenuGroupLabel>Playback</MenuGroupLabel>
+              <MenuItem>Play</MenuItem>
+              <MenuItem>Pause</MenuItem>
+            </MenuGroup>
+
+            <MenuSeparator />
+
+            <MenuCheckboxItem>Shuffle</MenuCheckboxItem>
+            <MenuCheckboxItem>Repeat</MenuCheckboxItem>
+
+            <MenuSeparator />
+
+            <MenuGroup>
+              <MenuGroupLabel>Sort by</MenuGroupLabel>
+              <MenuRadioGroup>
+                <MenuRadioItem value={"artist"}>Artist</MenuRadioItem>
+                <MenuRadioItem value={"album"}>Album</MenuRadioItem>
+                <MenuRadioItem value={"title"}>Title</MenuRadioItem>
+              </MenuRadioGroup>
+            </MenuGroup>
+
+            <MenuSeparator />
+
+            <MenuSub>
+              <MenuSubTrigger>Add to playlist</MenuSubTrigger>
+              <MenuSubPopup>
+                <MenuItem>Jazz</MenuItem>
+                <MenuItem>Rock</MenuItem>
+              </MenuSubPopup>
+            </MenuSub>
+          </MenuPopup>
+        </Menu>
+      ),
+    },
+    {
       id: "alert",
       name: "Alert",
-      command: "pnpm dlx shadcn@latest add @coss/alert",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/alert",
+        yarn: "yarn dlx shadcn@latest add @coss/alert",
+        npm: "npx shadcn@latest add @coss/alert",
+        bun: "bun dlx shadcn@latest add @coss/alert",
+      },
       example: (
-        <Alert className="w-48">
+        <Alert>
           <AlertTitle>Alert</AlertTitle>
-          <AlertDescription>This is an alert message.</AlertDescription>
+          <AlertDescription>An alert message.</AlertDescription>
         </Alert>
       ),
     },
     {
       id: "tabs",
       name: "Tabs",
-      command: "pnpm dlx shadcn@latest add @coss/tabs",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/tabs",
+        yarn: "yarn dlx shadcn@latest add @coss/tabs",
+        npm: "npx shadcn@latest add @coss/tabs",
+        bun: "bun dlx shadcn@latest add @coss/tabs",
+      },
       example: (
-        <Tabs defaultValue="tab1" className="w-48">
+        <Tabs defaultValue="overview" className={"w-full"}>
           <TabsList>
-            <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-            <TabsTrigger value="tab2">Tab 2</TabsTrigger>
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="features">Features</TabsTrigger>
           </TabsList>
-          <TabsContent value="tab1">Content 1</TabsContent>
-          <TabsContent value="tab2">Content 2</TabsContent>
+          <TabsContent value="overview">Overview content</TabsContent>
+          <TabsContent value="features">Features content</TabsContent>
         </Tabs>
       ),
     },
     {
       id: "accordion",
       name: "Accordion",
-      command: "pnpm dlx shadcn@latest add @coss/accordion",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/accordion",
+        yarn: "yarn dlx shadcn@latest add @coss/accordion",
+        npm: "npx shadcn@latest add @coss/accordion",
+        bun: "bun dlx shadcn@latest add @coss/accordion",
+      },
       example: (
-        <Accordion className="w-48">
+        <Accordion className={"w-full"}>
           <AccordionItem value="item-1">
-            <AccordionTrigger>Item 1</AccordionTrigger>
-            <AccordionContent>Content 1</AccordionContent>
+            <AccordionTrigger>What is Base UI?</AccordionTrigger>
+            <AccordionContent>
+              Base UI is a library of high-quality unstyled React components for
+              design systems and web apps.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Can I use it for my project?</AccordionTrigger>
+            <AccordionContent>
+              Yes, you can use Base UI for your project. It is designed to be
+              flexible and customizable.
+            </AccordionContent>
           </AccordionItem>
         </Accordion>
       ),
@@ -203,19 +374,34 @@ export default function Home() {
     {
       id: "separator",
       name: "Separator",
-      command: "pnpm dlx shadcn@latest add @coss/separator",
-      example: <Separator className="w-32" />,
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/separator",
+        yarn: "yarn dlx shadcn@latest add @coss/separator",
+        npm: "npx shadcn@latest add @coss/separator",
+        bun: "bun dlx shadcn@latest add @coss/separator",
+      },
+      example: <Separator />,
     },
     {
       id: "progress",
       name: "Progress",
-      command: "pnpm dlx shadcn@latest add @coss/progress",
-      example: <Progress value={33} className="w-32" />,
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/progress",
+        yarn: "yarn dlx shadcn@latest add @coss/progress",
+        npm: "npx shadcn@latest add @coss/progress",
+        bun: "bun dlx shadcn@latest add @coss/progress",
+      },
+      example: <Progress value={33} />,
     },
     {
       id: "skeleton",
       name: "Skeleton",
-      command: "pnpm dlx shadcn@latest add @coss/skeleton",
+      commands: {
+        pnpm: "pnpm dlx shadcn@latest add @coss/skeleton",
+        yarn: "yarn dlx shadcn@latest add @coss/skeleton",
+        npm: "npx shadcn@latest add @coss/skeleton",
+        bun: "bun dlx shadcn@latest add @coss/skeleton",
+      },
       example: <Skeleton className="w-32 h-4" />,
     },
   ];
@@ -232,96 +418,17 @@ export default function Home() {
         </p>
       </div>
       <BorderSeparator />
-      <div className="cpx grid grid-cols-1 gap-6 py-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      <div className="cpx grid grid-cols-1 gap-6 items-start py-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {components.map((component) => (
           <ComponentCard
             key={component.id}
             name={component.name}
-            command={component.command}
+            commands={component.commands}
             example={component.example}
           />
         ))}
       </div>
       <BorderSeparator />
-    </div>
-  );
-}
-
-function ComponentCard({
-  name,
-  command,
-  example,
-}: {
-  name: string;
-  command: string;
-  example: React.ReactNode;
-}) {
-  const [copied, setCopied] = useState(false);
-
-  const copyCommand = async () => {
-    try {
-      await navigator.clipboard.writeText(command);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy command:", err);
-    }
-  };
-
-  return (
-    <div className="relative flex flex-col gap-3 rounded border border-border bg-background p-4 transition-colors duration-150 hover:border-ring">
-      <div className="flex items-center justify-between mb-1">
-        <span className="truncate text-sm font-medium">{name}</span>
-        <button
-          type="button"
-          onClick={copyCommand}
-          className="ml-2 rounded p-1 hover:bg-muted focus-visible:ring-1 focus-visible:ring-ring transition"
-          aria-label="Copy install command"
-        >
-          {copied ? (
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <title>Copied</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <title>Copy command</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-              />
-            </svg>
-          )}
-        </button>
-      </div>
-      <div className="rounded bg-muted/30 border p-4 flex items-center justify-center min-h-[80px]">
-        {example}
-      </div>
-      <div>
-        <span className="mb-1 block text-xs text-muted-foreground">
-          Install:
-        </span>
-        <code className="block w-full rounded bg-muted border px-2 py-1 font-mono text-xs text-muted-foreground break-all">
-          {command}
-        </code>
-      </div>
     </div>
   );
 }

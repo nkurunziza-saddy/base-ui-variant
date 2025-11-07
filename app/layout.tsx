@@ -31,15 +31,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative flex min-h-screen flex-col overflow-hidden bg-secondary/40 supports-[overflow:clip]:overflow-clip dark:bg-background">
+        <div className="relative text-foreground/85 flex min-h-screen flex-col overflow-hidden bg-secondary/40 supports-[overflow:clip]:overflow-clip dark:bg-background">
           <header className="border-b border-dashed bg-card dark:bg-card/50">
             <div className="cpx container flex h-14 items-center justify-between py-2">
-              <Link
-                className="cursor-pointer rounded-md border border-dashed p-2 hover:bg-accent"
-                href="/"
-              >
-                <span className="font-medium">Site</span>
-              </Link>
+              <div className="flex gap-10">
+                <Link className="" href="/">
+                  <span className="font-medium">UI</span>
+                </Link>
+                <div>
+                  <Link className="" href="/blocks">
+                    <span className="text-sm">Blocks</span>
+                  </Link>
+                </div>
+              </div>
+
               <div className="flex items-center gap-2">
                 <Button
                   render={
@@ -86,15 +91,12 @@ export default function RootLayout({
                 <Link
                   aria-label="x/twitter"
                   className="font-medium text-foreground/90 hover:text-foreground hover:underline"
-                  href={`https://x.com`}
+                  href={`https://x.com/nk_saddy`}
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Shaban
+                  Nkurunziza Saddy
                 </Link>
-              </p>
-              <p className="text-muted-foreground">
-                &copy; {new Date().getFullYear()} Site
               </p>
             </div>
           </footer>
