@@ -56,17 +56,17 @@ export function BlockFormatDropDown({ blockType }: { blockType: string }) {
         className="lowercase"
       >
         {blockType === "paragraph" ? (
-          <Heading className="size-3.5" />
+          <Heading className="size-4" />
         ) : blockType === "h1" ? (
-          <Heading1 className="size-3.5" />
+          <Heading1 className="size-4" />
         ) : blockType === "h2" ? (
-          <Heading2 className="size-3.5" />
+          <Heading2 className="size-4" />
         ) : blockType === "h3" ? (
-          <Heading3 className="size-3.5" />
+          <Heading3 className="size-4" />
         ) : blockType === "h4" ? (
-          <Heading4 className="size-3.5" />
+          <Heading4 className="size-4" />
         ) : (
-          <Heading className="size-3.5" />
+          <Heading className="size-4" />
         )}
       </MenuTrigger>
       <MenuPopup align="start">
@@ -118,7 +118,7 @@ export function BlockFormatDropDown({ blockType }: { blockType: string }) {
                 {key}
               </span>
             </div>
-            {state ? <Check className="ml-auto size-3.5" /> : null}
+            {state ? <Check className="ml-auto size-4" /> : null}
           </MenuItem>
         ))}
       </MenuPopup>

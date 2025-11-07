@@ -26,21 +26,21 @@ export function InsertDropDown({
           }
           className="hover:bg-accent/80 transition-colors"
         >
-          <Minus className="mr-2 size-3.5" />
+          <Minus className="mr-2 size-4" />
           Divider
         </MenuItem>
         <MenuItem
           onClick={() => setShowTableDialog(true)}
           className="hover:bg-accent/80 transition-colors"
         >
-          <Table className="mr-2 size-3.5" />
+          <Table className="mr-2 size-4" />
           Table
         </MenuItem>
         <MenuItem
           onClick={() => setShowImageDialog(true)}
           className="hover:bg-accent/80 transition-colors"
         >
-          <ImageIcon className="mr-2 size-3.5" />
+          <ImageIcon className="mr-2 size-4" />
           Image
         </MenuItem>
       </MenuPopup>

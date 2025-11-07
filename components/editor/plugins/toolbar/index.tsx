@@ -296,7 +296,7 @@ export function Toolbar() {
               className="hover:bg-accent/80 transition-colors"
             >
               <div
-                className="size-3.5 rounded-sm mr-2 border shadow-sm"
+                className="size-4 rounded-sm mr-2 border shadow-sm"
                 style={{ backgroundColor: color.value }}
               />
               {color.name}

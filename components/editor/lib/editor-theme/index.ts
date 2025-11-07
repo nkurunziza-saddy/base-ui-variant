@@ -33,9 +33,9 @@ export const theme: EditorThemeClasses = {
     ul: "list-disc list-outside my-2 ml-6 space-y-1",
     listitem: "pl-2",
     listitemChecked:
-      "relative flex items-center gap-2 list-none outline-none text-muted-foreground before:content-[''] before:flex-shrink-0 before:mt-0.5 before:size-3.5 before:rounded before:border before:border-primary before:bg-primary before:cursor-pointer before:flex before:items-center before:justify-center before:[content:'✓'] before:text-primary-foreground before:text-sm before:font-medium [&>span]:line-through",
+      "relative flex items-center gap-2 list-none outline-none text-muted-foreground before:content-[''] before:flex-shrink-0 before:mt-0.5 before:size-4 before:rounded before:border before:border-primary before:bg-primary before:cursor-pointer before:flex before:items-center before:justify-center before:[content:'✓'] before:text-primary-foreground before:text-sm before:font-medium [&>span]:line-through",
     listitemUnchecked:
-      "relative flex items-center gap-2 list-none outline-none before:content-[''] before:flex-shrink-0 before:mt-0.5 before:size-3.5 before:rounded before:border before:border-border/50 before:bg-muted before:cursor-pointer hover:before:border-border/70",
+      "relative flex items-center gap-2 list-none outline-none before:content-[''] before:flex-shrink-0 before:mt-0.5 before:size-4 before:rounded before:border before:border-border/50 before:bg-muted before:cursor-pointer hover:before:border-border/70",
     checklist: "my-2 space-y-2",
   },
 

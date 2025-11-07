@@ -31,7 +31,7 @@ export function TableButtons() {
           onClick={insertRow}
           title="Insert Row Below"
         >
-          <Rows className="size-3.5" />
+          <Rows className="size-4" />
         </Button>
       </div>
       <div>
@@ -41,7 +41,7 @@ export function TableButtons() {
           onClick={insertColumn}
           title="Insert Column Right"
         >
-          <Columns className="size-3.5" />
+          <Columns className="size-4" />
         </Button>
       </div>
     </>

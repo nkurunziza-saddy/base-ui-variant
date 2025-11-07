@@ -62,7 +62,7 @@ export function ColorPicker({
   return (
     <Menu>
       <MenuTrigger render={<ToolbarButton disabled={disabled} />}>
-        <Palette className="size-3.5" style={{ color }} />
+        <Palette className="size-4" style={{ color }} />
       </MenuTrigger>
       <MenuPopup className="animate-in grid grid-cols-3 gap-1 slide-in-from-top-2 duration-200">
         {FONT_COLORS.map((c) => (
@@ -72,7 +72,7 @@ export function ColorPicker({
             onClick={() => applyColor(c.value)}
           >
             <div
-              className="size-3.5 rounded-sm border border-input/20 shadow-sm"
+              className="size-4 rounded-sm border border-input/20 shadow-sm"
               style={{ backgroundColor: c.value }}
             />
             {c.name}

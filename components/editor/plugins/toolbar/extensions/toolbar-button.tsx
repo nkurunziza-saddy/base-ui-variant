@@ -26,7 +26,7 @@ export function ToolbarToggleButton({
       title={title}
       onMouseDown={(e) => e.preventDefault()}
     >
-      <Icon className="size-3.5" />
+      <Icon className="size-4" />
     </Toggle>
   );
 }
@@ -64,7 +64,7 @@ export const ToolbarButton = React.forwardRef<
         {...props}
       >
         {children}
-        {Icon && <Icon className="size-3.5" />}
+        {Icon && <Icon className="size-4" />}
       </Button>
     );
   }

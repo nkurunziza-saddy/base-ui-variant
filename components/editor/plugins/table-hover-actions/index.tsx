@@ -154,7 +154,7 @@ export default function TableHoverActionsPlugin() {
             <Button variant="ghost" size="icon" className="rounded-full" />
           }
         >
-          <MoreHorizontal className="size-3.5" />
+          <MoreHorizontal className="size-4" />
         </MenuTrigger>
         <MenuPopup>
           <MenuItem onClick={() => modifyTable("delete-table")}>

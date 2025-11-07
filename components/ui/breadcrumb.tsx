@@ -72,7 +72,7 @@ function BreadcrumbSeparator({
       data-slot="breadcrumb-separator"
       role="presentation"
       aria-hidden="true"
-      className={cn("opacity-72 [&>svg]:size-3.5", className)}
+      className={cn("opacity-72 [&>svg]:size-4", className)}
       {...props}
     >
       {children ?? <ChevronRight />}
@@ -92,7 +92,7 @@ function BreadcrumbEllipsis({
       className={className}
       {...props}
     >
-      <MoreHorizontal className="size-3.5" />
+      <MoreHorizontal className="size-4" />
       <span className="sr-only">More</span>
     </span>
   );

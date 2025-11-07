@@ -198,7 +198,7 @@ export function FloatingToolbar() {
             onClick={() => formatHighlight("")}
             className="flex items-center gap-2"
           >
-            <Palette className="size-3.5" />
+            <Palette className="size-4" />
             Remove Highlight
           </MenuItem>
         </MenuPopup>

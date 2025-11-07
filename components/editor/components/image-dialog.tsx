@@ -131,7 +131,7 @@ export function ImageDialog({
                     className="w-full hover:bg-accent/80 transition-colors bg-transparent"
                     onClick={() => fileInputRef.current?.click()}
                   >
-                    <Upload className="size-3.5 mr-2" />
+                    <Upload className="size-4 mr-2" />
                     Upload from Computer
                   </Button>
                 </div>

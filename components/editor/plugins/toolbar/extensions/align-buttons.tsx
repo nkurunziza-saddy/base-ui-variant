@@ -27,28 +27,28 @@ export function AlignButtons() {
           onClick={() => formatElement("left")}
           className="hover:bg-accent/80 transition-colors"
         >
-          <AlignLeft className="mr-2 size-3.5" />
+          <AlignLeft className="mr-2 size-4" />
           Left
         </MenuItem>
         <MenuItem
           onClick={() => formatElement("center")}
           className="hover:bg-accent/80 transition-colors"
         >
-          <AlignCenter className="mr-2 size-3.5" />
+          <AlignCenter className="mr-2 size-4" />
           Center
         </MenuItem>
         <MenuItem
           onClick={() => formatElement("right")}
           className="hover:bg-accent/80 transition-colors"
         >
-          <AlignRight className="mr-2 size-3.5" />
+          <AlignRight className="mr-2 size-4" />
           Right
         </MenuItem>
         <MenuItem
           onClick={() => formatElement("justify")}
           className="hover:bg-accent/80 transition-colors"
         >
-          <AlignJustify className="mr-2 size-3.5" />
+          <AlignJustify className="mr-2 size-4" />
           Justify
         </MenuItem>
       </MenuPopup>

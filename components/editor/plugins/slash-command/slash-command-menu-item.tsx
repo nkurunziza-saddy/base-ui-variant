@@ -25,7 +25,7 @@ export function SlashCommandMenuItem({
       aria-selected={isSelected}
       tabIndex={-1}
     >
-      <Icon className="size-3.5 text-popover-foreground/80 group-hover:text-popover-foreground" />
+      <Icon className="size-4 text-popover-foreground/80 group-hover:text-popover-foreground" />
       <span className="text-sm text-popover-foreground/80 group-hover:text-popover-foreground">
         {command.title}
       </span>
