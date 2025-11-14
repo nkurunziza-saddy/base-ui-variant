@@ -5,8 +5,7 @@
   "description": "A customizable button component with variants",
   "files": [
     {
-      "path": "components/ui/button.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/button/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/button.tsx"
     }

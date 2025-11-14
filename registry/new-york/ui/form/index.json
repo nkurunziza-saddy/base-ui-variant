@@ -5,8 +5,7 @@
   "description": "A form component.",
   "files": [
     {
-      "path": "components/ui/form.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/form/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/form.tsx"
     }

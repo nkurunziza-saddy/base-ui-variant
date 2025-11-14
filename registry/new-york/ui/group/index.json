@@ -6,8 +6,7 @@
   "registryDependencies": ["separator"],
   "files": [
     {
-      "path": "components/ui/group.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/group/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/group.tsx"
     }

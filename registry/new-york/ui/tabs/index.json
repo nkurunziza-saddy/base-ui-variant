@@ -5,8 +5,7 @@
   "description": "A tabs component.",
   "files": [
     {
-      "path": "components/ui/tabs.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/tabs/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/tabs.tsx"
     }

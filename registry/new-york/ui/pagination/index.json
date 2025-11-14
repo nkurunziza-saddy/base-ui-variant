@@ -6,8 +6,7 @@
   "registryDependencies": ["button"],
   "files": [
     {
-      "path": "components/ui/pagination.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/pagination/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/pagination.tsx"
     }

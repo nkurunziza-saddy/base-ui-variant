@@ -5,8 +5,7 @@
   "description": "An image element with a fallback for representing a user.",
   "files": [
     {
-      "path": "components/ui/avatar.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/avatar/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/avatar.tsx"
     }

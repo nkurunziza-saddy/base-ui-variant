@@ -5,8 +5,7 @@
   "description": "Displays a callout for user attention.",
   "files": [
     {
-      "path": "components/ui/alert.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/alert/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/alert.tsx"
     }

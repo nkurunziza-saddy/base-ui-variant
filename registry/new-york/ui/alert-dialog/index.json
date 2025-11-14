@@ -5,8 +5,7 @@
   "description": "A modal dialog that interrupts the user with important content and expects a response.",
   "files": [
     {
-      "path": "components/ui/alert-dialog.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/alert-dialog/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/alert-dialog.tsx"
     }

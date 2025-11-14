@@ -3,7 +3,10 @@
   "name": "autocomplete",
   "type": "registry:ui",
   "description": "An input field that provides suggestions as the user types.",
-  "registryDependencies": ["input", "scroll-area"],
+  "registryDependencies": [
+    "input",
+    "scroll-area"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/autocomplete/index.tsx",

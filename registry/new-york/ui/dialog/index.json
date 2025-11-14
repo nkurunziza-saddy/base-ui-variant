@@ -5,8 +5,7 @@
   "description": "A dialog component.",
   "files": [
     {
-      "path": "components/ui/dialog.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/dialog/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/dialog.tsx"
     }

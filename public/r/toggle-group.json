@@ -3,7 +3,10 @@
   "name": "toggle-group",
   "type": "registry:ui",
   "description": "A toggle group component.",
-  "registryDependencies": ["separator", "toggle"],
+  "registryDependencies": [
+    "separator",
+    "toggle"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/toggle-group/index.tsx",

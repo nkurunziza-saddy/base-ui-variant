@@ -5,8 +5,7 @@
   "description": "An input component.",
   "files": [
     {
-      "path": "components/ui/input.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/input/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/input.tsx"
     }

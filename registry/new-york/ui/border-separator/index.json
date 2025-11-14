@@ -5,8 +5,7 @@
   "description": "A separator with a border.",
   "files": [
     {
-      "path": "components/ui/border-separator.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/border-separator/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/border-separator.tsx"
     }

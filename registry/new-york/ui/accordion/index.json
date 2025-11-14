@@ -5,8 +5,7 @@
   "description": "A vertically stacking set of interactive headings that each reveal a section of content.",
   "files": [
     {
-      "path": "components/ui/accordion.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/accordion/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/accordion.tsx"
     }

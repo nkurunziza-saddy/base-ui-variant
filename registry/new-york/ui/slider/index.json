@@ -5,8 +5,7 @@
   "description": "A slider component.",
   "files": [
     {
-      "path": "components/ui/slider.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/slider/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/slider.tsx"
     }

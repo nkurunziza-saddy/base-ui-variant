@@ -6,8 +6,7 @@
   "registryDependencies": ["button"],
   "files": [
     {
-      "path": "components/ui/toast.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/toast/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/toast.tsx"
     }

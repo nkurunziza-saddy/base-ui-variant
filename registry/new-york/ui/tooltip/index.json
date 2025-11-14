@@ -5,8 +5,7 @@
   "description": "A tooltip component.",
   "files": [
     {
-      "path": "components/ui/tooltip.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/tooltip/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/tooltip.tsx"
     }

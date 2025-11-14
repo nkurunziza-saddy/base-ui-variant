@@ -6,8 +6,7 @@
   "registryDependencies": ["input", "scroll-area"],
   "files": [
     {
-      "path": "components/ui/combobox.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/combobox/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/combobox.tsx"
     }

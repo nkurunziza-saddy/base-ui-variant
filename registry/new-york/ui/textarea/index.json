@@ -5,8 +5,7 @@
   "description": "A textarea component.",
   "files": [
     {
-      "path": "components/ui/textarea.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/textarea/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/textarea.tsx"
     }

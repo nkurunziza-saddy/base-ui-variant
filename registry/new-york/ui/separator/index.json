@@ -5,8 +5,7 @@
   "description": "A separator component.",
   "files": [
     {
-      "path": "components/ui/separator.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/separator/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/separator.tsx"
     }

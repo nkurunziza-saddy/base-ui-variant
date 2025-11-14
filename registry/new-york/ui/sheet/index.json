@@ -5,8 +5,7 @@
   "description": "A sheet component.",
   "files": [
     {
-      "path": "components/ui/sheet.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/sheet/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/sheet.tsx"
     }

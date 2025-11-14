@@ -5,8 +5,7 @@
   "description": "A checkbox component.",
   "files": [
     {
-      "path": "components/ui/checkbox.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/checkbox/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/checkbox.tsx"
     }

@@ -5,8 +5,7 @@
   "description": "A breadcrumb navigation.",
   "files": [
     {
-      "path": "components/ui/breadcrumb.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/breadcrumb/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/breadcrumb.tsx"
     }

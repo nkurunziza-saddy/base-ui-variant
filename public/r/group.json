@@ -3,7 +3,9 @@
   "name": "group",
   "type": "registry:ui",
   "description": "A group component.",
-  "registryDependencies": ["separator"],
+  "registryDependencies": [
+    "separator"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/group/index.tsx",

@@ -1,628 +1,19 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "",
-  "homepage": "https://ui.shadcn.com",
+  "name": "Uruhuu",
+  "homepage": "https://uruhuu.vercel.app/",
+  "extends": "none",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "tooltip",
+      "name": "accordion",
       "type": "registry:ui",
-      "description": "A tooltip component.",
+      "description": "A vertically stacking set of interactive headings that each reveal a section of content.",
       "files": [
         {
-          "path": "registry/new-york/ui/tooltip/index.tsx",
-          "content": "",
+          "path": "registry/new-york/ui/accordion/index.tsx",
           "type": "registry:ui",
-          "target": "components/ui/tooltip.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "toolbar",
-      "type": "registry:ui",
-      "description": "A toolbar component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/toolbar/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/toolbar.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "toggle-group",
-      "type": "registry:ui",
-      "description": "A toggle group component.",
-      "registryDependencies": ["separator", "toggle"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/toggle-group/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/toggle-group.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "toggle",
-      "type": "registry:ui",
-      "description": "A toggle component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/toggle/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/toggle.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "toast",
-      "type": "registry:ui",
-      "description": "A toast component.",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/toast/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/toast.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "textarea",
-      "type": "registry:ui",
-      "description": "A textarea component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/textarea/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/textarea.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "tabs",
-      "type": "registry:ui",
-      "description": "A tabs component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/tabs/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/tabs.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "table",
-      "type": "registry:ui",
-      "description": "A table component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/table/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/table.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "switch",
-      "type": "registry:ui",
-      "description": "A switch component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/switch/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/switch.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "slider",
-      "type": "registry:ui",
-      "description": "A slider component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/slider/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/slider.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "skeleton",
-      "type": "registry:ui",
-      "description": "A skeleton loading state component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/skeleton/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/skeleton.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "sheet",
-      "type": "registry:ui",
-      "description": "A sheet component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/sheet/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/sheet.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "separator",
-      "type": "registry:ui",
-      "description": "A separator component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/separator/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/separator.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "select",
-      "type": "registry:ui",
-      "description": "A select component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/select/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/select.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "scroll-area",
-      "type": "registry:ui",
-      "description": "A scroll area component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/scroll-area/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/scroll-area.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "radio-group",
-      "type": "registry:ui",
-      "description": "A radio group component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/radio-group/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/radio-group.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "progress",
-      "type": "registry:ui",
-      "description": "A progress component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/progress/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/progress.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "preview-card",
-      "type": "registry:ui",
-      "description": "A preview card component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/preview-card/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/preview-card.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "popover",
-      "type": "registry:ui",
-      "description": "A popover component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/popover/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/popover.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "pagination",
-      "type": "registry:ui",
-      "description": "A pagination component.",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/pagination/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/pagination.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "number-field",
-      "type": "registry:ui",
-      "description": "A number field component.",
-      "registryDependencies": ["label"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/number-field/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/number-field.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "meter",
-      "type": "registry:ui",
-      "description": "A meter component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/meter/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/meter.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "menu",
-      "type": "registry:ui",
-      "description": "A menu component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/menu/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/menu.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "label",
-      "type": "registry:ui",
-      "description": "A label component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/label/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/label.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "input",
-      "type": "registry:ui",
-      "description": "An input component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/input/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/input.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "group",
-      "type": "registry:ui",
-      "description": "A group component.",
-      "registryDependencies": ["separator"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/group/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/group.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "frame",
-      "type": "registry:ui",
-      "description": "A frame component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/frame/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/frame.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "form",
-      "type": "registry:ui",
-      "description": "A form component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/form/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/form.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "fieldset",
-      "type": "registry:ui",
-      "description": "A fieldset component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/fieldset/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/fieldset.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "field",
-      "type": "registry:ui",
-      "description": "A form field component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/field/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/field.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "empty",
-      "type": "registry:ui",
-      "description": "An empty state component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/empty/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/empty.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "dialog",
-      "type": "registry:ui",
-      "description": "A dialog component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/dialog/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/dialog.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "combobox",
-      "type": "registry:ui",
-      "description": "A combobox component.",
-      "registryDependencies": ["input", "scroll-area"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/combobox/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/combobox.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "collapsible",
-      "type": "registry:ui",
-      "description": "A collapsible component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/collapsible/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/collapsible.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "checkbox-group",
-      "type": "registry:ui",
-      "description": "A group of checkboxes.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/checkbox-group/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/checkbox-group.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "checkbox",
-      "type": "registry:ui",
-      "description": "A checkbox component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/checkbox/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/checkbox.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "card",
-      "type": "registry:ui",
-      "description": "A card component.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/card/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/card.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "button",
-      "type": "registry:ui",
-      "description": "A customizable button component with variants",
-      "files": [
-        {
-          "path": "registry/new-york/ui/button/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/button.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "breadcrumb",
-      "type": "registry:ui",
-      "description": "A breadcrumb navigation.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/breadcrumb/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/breadcrumb.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "border-separator",
-      "type": "registry:ui",
-      "description": "A separator with a border.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/border-separator/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/border-separator.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "badge",
-      "type": "registry:ui",
-      "description": "Displays a badge or a tag.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/badge/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/badge.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "avatar",
-      "type": "registry:ui",
-      "description": "An image element with a fallback for representing a user.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/avatar/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/avatar.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "autocomplete",
-      "type": "registry:ui",
-      "description": "An input field that provides suggestions as the user types.",
-      "registryDependencies": ["input", "scroll-area"],
-      "files": [
-        {
-          "path": "registry/new-york/ui/autocomplete/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/autocomplete.tsx"
-        }
-      ]
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "alert-dialog",
-      "type": "registry:ui",
-      "description": "A modal dialog that interrupts the user with important content and expects a response.",
-      "files": [
-        {
-          "path": "registry/new-york/ui/alert-dialog/index.tsx",
-          "content": "",
-          "type": "registry:ui",
-          "target": "components/ui/alert-dialog.tsx"
+          "target": "components/ui/accordion.tsx"
         }
       ]
     },
@@ -634,7 +25,6 @@
       "files": [
         {
           "path": "registry/new-york/ui/alert/index.tsx",
-          "content": "",
           "type": "registry:ui",
           "target": "components/ui/alert.tsx"
         }
@@ -642,19 +32,183 @@
     },
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "accordion",
+      "name": "alert-dialog",
       "type": "registry:ui",
-      "description": "A vertically stacking set of interactive headings that each reveal a section of content.",
+      "description": "A modal dialog that interrupts the user with important content and expects a response.",
       "files": [
         {
-          "path": "registry/new-york/ui/accordion/index.tsx",
-          "content": "",
+          "path": "registry/new-york/ui/alert-dialog/index.tsx",
           "type": "registry:ui",
-          "target": "components/ui/accordion.tsx"
+          "target": "components/ui/alert-dialog.tsx"
         }
       ]
     },
     {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "description": "An input field that provides suggestions as the user types.",
+      "registryDependencies": [
+        "input",
+        "scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/autocomplete/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/autocomplete.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "avatar",
+      "type": "registry:ui",
+      "description": "An image element with a fallback for representing a user.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/avatar/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "badge",
+      "type": "registry:ui",
+      "description": "Displays a badge or a tag.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/badge/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "border-separator",
+      "type": "registry:ui",
+      "description": "A separator with a border.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/border-separator/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/border-separator.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "description": "A breadcrumb navigation.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/breadcrumb/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "button",
+      "type": "registry:ui",
+      "description": "A customizable button component with variants",
+      "files": [
+        {
+          "path": "registry/new-york/ui/button/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "card",
+      "type": "registry:ui",
+      "description": "A card component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/card/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "checkbox",
+      "type": "registry:ui",
+      "description": "A checkbox component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/checkbox/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "checkbox-group",
+      "type": "registry:ui",
+      "description": "A group of checkboxes.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/checkbox-group/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox-group.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "collapsible",
+      "type": "registry:ui",
+      "description": "A collapsible component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/collapsible/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "combobox",
+      "type": "registry:ui",
+      "description": "A combobox component.",
+      "registryDependencies": [
+        "input",
+        "scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/combobox/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "dialog",
+      "type": "registry:ui",
+      "description": "A dialog component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/dialog/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "editor",
       "type": "registry:block",
       "title": "Rich Text Editor",
@@ -678,10 +232,6 @@
         },
         {
           "path": "registry/new-york/blocks/editor/components/table-dialog.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/editor/components/theme-toggler.tsx",
           "type": "registry:component"
         },
         {
@@ -823,6 +373,425 @@
         "input",
         "label",
         "separator"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "empty",
+      "type": "registry:ui",
+      "description": "An empty state component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/empty/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/empty.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "field",
+      "type": "registry:ui",
+      "description": "A form field component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/field/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/field.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "fieldset",
+      "type": "registry:ui",
+      "description": "A fieldset component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/fieldset/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/fieldset.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "form",
+      "type": "registry:ui",
+      "description": "A form component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/form/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/form.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "frame",
+      "type": "registry:ui",
+      "description": "A frame component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/frame/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/frame.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "group",
+      "type": "registry:ui",
+      "description": "A group component.",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/group/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/group.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "input",
+      "type": "registry:ui",
+      "description": "An input component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "label",
+      "type": "registry:ui",
+      "description": "A label component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/label/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "menu",
+      "type": "registry:ui",
+      "description": "A menu component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/menu/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menu.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "meter",
+      "type": "registry:ui",
+      "description": "A meter component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/meter/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/meter.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "number-field",
+      "type": "registry:ui",
+      "description": "A number field component.",
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/number-field/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/number-field.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "pagination",
+      "type": "registry:ui",
+      "description": "A pagination component.",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/pagination/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "popover",
+      "type": "registry:ui",
+      "description": "A popover component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/popover/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "preview-card",
+      "type": "registry:ui",
+      "description": "A preview card component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/preview-card/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/preview-card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "progress",
+      "type": "registry:ui",
+      "description": "A progress component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/progress/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "radio-group",
+      "type": "registry:ui",
+      "description": "A radio group component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/radio-group/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "description": "A scroll area component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/scroll-area/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "select",
+      "type": "registry:ui",
+      "description": "A select component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/select/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "separator",
+      "type": "registry:ui",
+      "description": "A separator component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/separator/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "sheet",
+      "type": "registry:ui",
+      "description": "A sheet component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/sheet/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sheet.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "skeleton",
+      "type": "registry:ui",
+      "description": "A skeleton loading state component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/skeleton/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "slider",
+      "type": "registry:ui",
+      "description": "A slider component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/slider/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "switch",
+      "type": "registry:ui",
+      "description": "A switch component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/switch/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "table",
+      "type": "registry:ui",
+      "description": "A table component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/table/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "tabs",
+      "type": "registry:ui",
+      "description": "A tabs component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tabs/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "textarea",
+      "type": "registry:ui",
+      "description": "A textarea component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/textarea/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "toast",
+      "type": "registry:ui",
+      "description": "A toast component.",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/toast/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toast.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "toggle",
+      "type": "registry:ui",
+      "description": "A toggle component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "description": "A toggle group component.",
+      "registryDependencies": [
+        "separator",
+        "toggle"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle-group/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "toolbar",
+      "type": "registry:ui",
+      "description": "A toolbar component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/toolbar/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toolbar.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "tooltip",
+      "type": "registry:ui",
+      "description": "A tooltip component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tooltip/index.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
       ]
     }
   ]

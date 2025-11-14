@@ -3,7 +3,10 @@
   "name": "combobox",
   "type": "registry:ui",
   "description": "A combobox component.",
-  "registryDependencies": ["input", "scroll-area"],
+  "registryDependencies": [
+    "input",
+    "scroll-area"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/combobox/index.tsx",

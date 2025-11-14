@@ -5,8 +5,7 @@
   "description": "A meter component.",
   "files": [
     {
-      "path": "components/ui/meter.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/meter/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/meter.tsx"
     }

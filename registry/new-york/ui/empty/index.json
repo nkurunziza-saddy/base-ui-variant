@@ -5,8 +5,7 @@
   "description": "An empty state component.",
   "files": [
     {
-      "path": "components/ui/empty.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/empty/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/empty.tsx"
     }

@@ -5,8 +5,7 @@
   "description": "A switch component.",
   "files": [
     {
-      "path": "components/ui/switch.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/switch/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/switch.tsx"
     }

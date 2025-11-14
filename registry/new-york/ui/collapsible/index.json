@@ -5,8 +5,7 @@
   "description": "A collapsible component.",
   "files": [
     {
-      "path": "components/ui/collapsible.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/collapsible/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/collapsible.tsx"
     }

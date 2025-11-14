@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "registry:build": "shadcn build",
+    "registry:generate": "tsx scripts/build-registry.ts",
+    "registry:build": "pnpm run registry:generate && shadcn build",
     "build": "pnpm run registry:build && next build",
     "start": "next start",
     "lint": "biome check",

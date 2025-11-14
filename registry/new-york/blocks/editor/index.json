@@ -1,0 +1,168 @@
+ {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "editor",
+      "type": "registry:block",
+      "title": "Rich Text Editor",
+      "description": "A powerful rich text editor with markdown support.",
+      "files": [
+        {
+          "path": "registry/new-york/blocks/editor/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/components/image-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/components/index.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/components/link-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/components/table-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/components/toolbar-separator.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/colors.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/configs.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/editor-theme/index.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/hooks/use-floating-toolbar.ts",
+          "type": "registry:hook"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/nodes/image-node.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/nodes/index.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/types/editor.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/utils/export.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/utils/import.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/lib/utils/index.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/floating-toolbar/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/slash-command/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/slash-command/slash-command-items.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/slash-command/slash-command-menu-item.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/table-hover-actions/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/toolbar-items.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/align-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/block-format-dropdown.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/block-type-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/color-picker.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/file-actions.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/history-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/insert-actions.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/list-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/table-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/text-format-buttons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/toolbar-button.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "dependencies": [
+        "@lexical/react",
+        "@lexical/utils",
+        "lexical",
+        "@lexical/code",
+        "@lexical/html",
+        "@lexical/link",
+        "@lexical/list",
+        "@lexical/markdown",
+        "@lexical/rich-text",
+        "@lexical/selection",
+        "@lexical/table"
+      ],
+      "registryDependencies": [
+        "button",
+        "tooltip",
+        "popover",
+        "menu",
+        "dialog",
+        "input",
+        "label",
+        "separator"
+      ]
+    }

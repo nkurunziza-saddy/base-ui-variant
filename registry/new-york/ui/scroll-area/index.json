@@ -5,8 +5,7 @@
   "description": "A scroll area component.",
   "files": [
     {
-      "path": "components/ui/scroll-area.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/scroll-area/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/scroll-area.tsx"
     }

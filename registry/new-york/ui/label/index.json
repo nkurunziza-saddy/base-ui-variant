@@ -5,8 +5,7 @@
   "description": "A label component.",
   "files": [
     {
-      "path": "components/ui/label.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/label/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/label.tsx"
     }

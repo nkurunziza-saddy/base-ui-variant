@@ -5,8 +5,7 @@
   "description": "A select component.",
   "files": [
     {
-      "path": "components/ui/select.tsx",
-      "content": "",
+      "path": "registry/new-york/ui/select/index.tsx",
       "type": "registry:ui",
       "target": "components/ui/select.tsx"
     }
