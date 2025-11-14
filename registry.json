@@ -2,7 +2,6 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Uruhuu",
   "homepage": "https://uruhuu.vercel.app/",
-  "extends": "none",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
@@ -212,157 +211,194 @@
       "name": "editor",
       "type": "registry:block",
       "title": "Rich Text Editor",
-      "description": "A powerful rich text editor with markdown support.",
+      "description": "A powerful Lexical-based rich text editor with markdown support, slash commands, floating toolbar, and table editing capabilities. Built with Tailwind v4 and OKLCH colors.",
       "files": [
         {
           "path": "registry/new-york/blocks/editor/index.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/index.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/components/image-dialog.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/components/image-dialog.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/components/index.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/components/index.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/components/link-dialog.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/components/link-dialog.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/components/table-dialog.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/components/table-dialog.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/components/toolbar-separator.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/components/toolbar-separator.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/colors.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/colors.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/configs.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/configs.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/editor-theme/index.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/editor-theme/index.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/hooks/use-floating-toolbar.ts",
-          "type": "registry:hook"
+          "type": "registry:hook",
+          "target": "components/editor/lib/hooks/use-floating-toolbar.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/nodes/image-node.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/lib/nodes/image-node.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/nodes/index.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/nodes/index.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/types/editor.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/types/editor.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/utils/export.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/utils/export.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/utils/import.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/utils/import.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/lib/utils/index.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/lib/utils/index.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/floating-toolbar/index.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/floating-toolbar/index.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/slash-command/index.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/slash-command/index.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/slash-command/slash-command-items.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/plugins/slash-command/slash-command-items.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/slash-command/slash-command-menu-item.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/slash-command/slash-command-menu-item.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/table-hover-actions/index.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/table-hover-actions/index.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/index.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/index.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/toolbar-items.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/editor/plugins/toolbar/toolbar-items.ts"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/align-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/align-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/block-format-dropdown.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/block-format-dropdown.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/block-type-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/block-type-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/color-picker.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/color-picker.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/file-actions.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/file-actions.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/history-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/history-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/insert-actions.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/insert-actions.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/list-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/list-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/table-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/table-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/text-format-buttons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/text-format-buttons.tsx"
         },
         {
           "path": "registry/new-york/blocks/editor/plugins/toolbar/extensions/toolbar-button.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/editor/plugins/toolbar/extensions/toolbar-button.tsx"
         }
       ],
       "dependencies": [
-        "@lexical/react",
-        "@lexical/utils",
-        "lexical",
-        "@lexical/code",
-        "@lexical/html",
-        "@lexical/link",
-        "@lexical/list",
-        "@lexical/markdown",
-        "@lexical/rich-text",
-        "@lexical/selection",
-        "@lexical/table"
+        "@lexical/react@^0.17.1",
+        "@lexical/utils@^0.17.1",
+        "lexical@^0.17.1",
+        "@lexical/code@^0.17.1",
+        "@lexical/html@^0.17.1",
+        "@lexical/link@^0.17.1",
+        "@lexical/list@^0.17.1",
+        "@lexical/markdown@^0.17.1",
+        "@lexical/rich-text@^0.17.1",
+        "@lexical/selection@^0.17.1",
+        "@lexical/table@^0.17.1"
+      ],
+      "devDependencies": [
+        "@types/node@^20.0.0"
       ],
       "registryDependencies": [
         "button",
@@ -373,7 +409,52 @@
         "input",
         "label",
         "separator"
-      ]
+      ],
+      "cssVars": {
+        "light": {
+          "editor-background": "oklch(1 0 0)",
+          "editor-foreground": "oklch(0.145 0 0)",
+          "editor-card": "oklch(1 0 0)",
+          "editor-card-foreground": "oklch(0.145 0 0)",
+          "editor-popover": "oklch(1 0 0)",
+          "editor-popover-foreground": "oklch(0.145 0 0)",
+          "editor-primary": "oklch(0.205 0 0)",
+          "editor-primary-foreground": "oklch(0.985 0 0)",
+          "editor-muted": "oklch(0.97 0 0)",
+          "editor-muted-foreground": "oklch(0.556 0 0)",
+          "editor-accent": "oklch(0.97 0 0)",
+          "editor-accent-foreground": "oklch(0.205 0 0)",
+          "editor-border": "oklch(0.922 0 0)",
+          "editor-input": "oklch(0.922 0 0)",
+          "editor-ring": "oklch(0.708 0 0)",
+          "editor-radius": "0.5rem"
+        },
+        "dark": {
+          "editor-background": "oklch(0.145 0 0)",
+          "editor-foreground": "oklch(0.985 0 0)",
+          "editor-card": "oklch(0.205 0 0)",
+          "editor-card-foreground": "oklch(0.985 0 0)",
+          "editor-popover": "oklch(0.205 0 0)",
+          "editor-popover-foreground": "oklch(0.985 0 0)",
+          "editor-primary": "oklch(0.922 0 0)",
+          "editor-primary-foreground": "oklch(0.205 0 0)",
+          "editor-muted": "oklch(0.269 0 0)",
+          "editor-muted-foreground": "oklch(0.708 0 0)",
+          "editor-accent": "oklch(0.269 0 0)",
+          "editor-accent-foreground": "oklch(0.985 0 0)",
+          "editor-border": "oklch(1 0 0 / 10%)",
+          "editor-input": "oklch(1 0 0 / 15%)",
+          "editor-ring": "oklch(0.556 0 0)",
+          "editor-radius": "0.5rem"
+        }
+      },
+      "docs": "https://uruhuu.vercel.app/docs/components/editor",
+      "meta": {
+        "category": "blocks",
+        "subcategory": "editor",
+        "featured": true,
+        "version": "1.0.0"
+      }
     },
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",

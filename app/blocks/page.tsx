@@ -1,3 +1,4 @@
+import { getInstallCommand } from "@/lib/utils/install-command";
 import Link from "next/link";
 import { Editor } from "@/registry/new-york/blocks/editor";
 import {
@@ -12,10 +13,10 @@ export default function Home() {
       id: "editor",
       name: "Editor",
       commands: {
-        pnpm: "pnpm dlx shadcn@latest add @coss/editor",
-        yarn: "yarn dlx shadcn@latest add @coss/editor",
-        npm: "npx shadcn@latest add @coss/editor",
-        bun: "bun dlx shadcn@latest add @coss/editor",
+        pnpm: getInstallCommand({ packageManager: "pnpm", component: "editor" }),
+        yarn: getInstallCommand({ packageManager: "yarn", component: "editor" }),
+        npm: getInstallCommand({ packageManager: "npm", component: "editor" }),
+        bun: getInstallCommand({ packageManager: "bun", component: "editor" }),
       },
       examples: [
         {

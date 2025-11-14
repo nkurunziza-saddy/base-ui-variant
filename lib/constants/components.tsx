@@ -1,3 +1,4 @@
+import { getInstallCommand } from "@/lib/utils/install-command";
 import { AlertCircle } from "lucide-react";
 import {
   Accordion,
@@ -121,10 +122,10 @@ export const COMPONENTS = [
     id: "button",
     name: "Button",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/button",
-      yarn: "yarn dlx shadcn@latest add @coss/button",
-      npm: "npx shadcn@latest add @coss/button",
-      bun: "bun dlx shadcn@latest add @coss/button",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "button" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "button" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "button" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "button" }),
     },
     example: <Button>Click me</Button>,
   },
@@ -132,10 +133,10 @@ export const COMPONENTS = [
     id: "input",
     name: "Input",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/input",
-      yarn: "yarn dlx shadcn@latest add @coss/input",
-      npm: "npx shadcn@latest add @coss/input",
-      bun: "bun dlx shadcn@latest add @coss/input",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "input" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "input" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "input" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "input" }),
     },
     example: <Input placeholder="Enter text..." />,
   },
@@ -143,10 +144,10 @@ export const COMPONENTS = [
     id: "card",
     name: "Card",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/card",
-      yarn: "yarn dlx shadcn@latest add @coss/card",
-      npm: "npx shadcn@latest add @coss/card",
-      bun: "bun dlx shadcn@latest add @coss/card",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "card" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "card" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "card" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "card" }),
     },
     example: (
       <div className="w-full">
@@ -166,10 +167,16 @@ export const COMPONENTS = [
     id: "checkbox",
     name: "Checkbox",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/checkbox",
-      yarn: "yarn dlx shadcn@latest add @coss/checkbox",
-      npm: "npx shadcn@latest add @coss/checkbox",
-      bun: "bun dlx shadcn@latest add @coss/checkbox",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "checkbox",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "checkbox",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "checkbox" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "checkbox" }),
     },
     example: <Checkbox />,
   },
@@ -177,10 +184,10 @@ export const COMPONENTS = [
     id: "switch",
     name: "Switch",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/switch",
-      yarn: "yarn dlx shadcn@latest add @coss/switch",
-      npm: "npx shadcn@latest add @coss/switch",
-      bun: "bun dlx shadcn@latest add @coss/switch",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "switch" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "switch" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "switch" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "switch" }),
     },
     example: <Switch />,
   },
@@ -188,10 +195,10 @@ export const COMPONENTS = [
     id: "slider",
     name: "Slider",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/slider",
-      yarn: "yarn dlx shadcn@latest add @coss/slider",
-      npm: "npx shadcn@latest add @coss/slider",
-      bun: "bun dlx shadcn@latest add @coss/slider",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "slider" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "slider" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "slider" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "slider" }),
     },
     example: <Slider className="w-32" />,
   },
@@ -199,10 +206,22 @@ export const COMPONENTS = [
     id: "radio-group",
     name: "Radio Group",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/radio-group",
-      yarn: "yarn dlx shadcn@latest add @coss/radio-group",
-      npm: "npx shadcn@latest add @coss/radio-group",
-      bun: "bun dlx shadcn@latest add @cos/radio-group",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "radio-group",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "radio-group",
+      }),
+      npm: getInstallCommand({
+        packageManager: "npm",
+        component: "radio-group",
+      }),
+      bun: getInstallCommand({
+        packageManager: "bun",
+        component: "radio-group",
+      }),
     },
     example: (
       <RadioGroup defaultValue="next">
@@ -222,10 +241,10 @@ export const COMPONENTS = [
     id: "select",
     name: "Select",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/select",
-      yarn: "yarn dlx shadcn@latest add @coss/select",
-      npm: "npx shadcn@latest add @coss/select",
-      bun: "bun dlx shadcn@latest add @coss/select",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "select" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "select" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "select" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "select" }),
     },
     example: (
       <Select
@@ -258,10 +277,16 @@ export const COMPONENTS = [
     id: "textarea",
     name: "Textarea",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/textarea",
-      yarn: "yarn dlx shadcn@latest add @coss/textarea",
-      npm: "npx shadcn@latest add @coss/textarea",
-      bun: "bun dlx shadcn@latest add @coss/textarea",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "textarea",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "textarea",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "textarea" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "textarea" }),
     },
     example: <Textarea />,
   },
@@ -269,10 +294,10 @@ export const COMPONENTS = [
     id: "badge",
     name: "Badge",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/badge",
-      yarn: "yarn dlx shadcn@latest add @coss/badge",
-      npm: "npx shadcn@latest add @coss/badge",
-      bun: "bun dlx shadcn@latest add @coss/badge",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "badge" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "badge" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "badge" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "badge" }),
     },
     example: (
       <div className="grid grid-cols-3 gap-2">
@@ -289,10 +314,10 @@ export const COMPONENTS = [
     id: "avatar",
     name: "Avatar",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/avatar",
-      yarn: "yarn dlx shadcn@latest add @coss/avatar",
-      npm: "npx shadcn@latest add @coss/avatar",
-      bun: "bun dlx shadcn@latest add @coss/avatar",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "avatar" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "avatar" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "avatar" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "avatar" }),
     },
     example: (
       <Avatar>
@@ -305,10 +330,10 @@ export const COMPONENTS = [
     id: "menu",
     name: "Menu",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/menu",
-      yarn: "yarn dlx shadcn@latest add @coss/menu",
-      npm: "npx shadcn@latest add @coss/menu",
-      bun: "bun dlx shadcn@latest add @coss/menu",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "menu" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "menu" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "menu" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "menu" }),
     },
     example: (
       <Menu>
@@ -356,10 +381,10 @@ export const COMPONENTS = [
     id: "alert",
     name: "Alert",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/alert",
-      yarn: "yarn dlx shadcn@latest add @coss/alert",
-      npm: "npx shadcn@latest add @coss/alert",
-      bun: "bun dlx shadcn@latest add @coss/alert",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "alert" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "alert" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "alert" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "alert" }),
     },
     example: (
       <div className="flex flex-col gap-0.5 w-full">
@@ -383,10 +408,10 @@ export const COMPONENTS = [
     id: "tabs",
     name: "Tabs",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/tabs",
-      yarn: "yarn dlx shadcn@latest add @coss/tabs",
-      npm: "npx shadcn@latest add @coss/tabs",
-      bun: "bun dlx shadcn@latest add @coss/tabs",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "tabs" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "tabs" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "tabs" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "tabs" }),
     },
     example: (
       <Tabs className={"w-full"} defaultValue="overview">
@@ -403,10 +428,16 @@ export const COMPONENTS = [
     id: "accordion",
     name: "Accordion",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/accordion",
-      yarn: "yarn dlx shadcn@latest add @coss/accordion",
-      npm: "npx shadcn@latest add @coss/accordion",
-      bun: "bun dlx shadcn@latest add @coss/accordion",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "accordion",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "accordion",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "accordion" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "accordion" }),
     },
     example: (
       <Accordion className={"w-full"}>
@@ -431,10 +462,16 @@ export const COMPONENTS = [
     id: "separator",
     name: "Separator",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/separator",
-      yarn: "yarn dlx shadcn@latest add @coss/separator",
-      npm: "npx shadcn@latest add @coss/separator",
-      bun: "bun dlx shadcn@latest add @coss/separator",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "separator",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "separator",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "separator" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "separator" }),
     },
     example: <Separator />,
   },
@@ -442,10 +479,10 @@ export const COMPONENTS = [
     id: "sheet",
     name: "Sheet",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/sheet",
-      yarn: "yarn dlx shadcn@latest add @coss/sheet",
-      npm: "npx shadcn@latest add @coss/sheet",
-      bun: "bun dlx shadcn@latest add @coss/sheet",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "sheet" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "sheet" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "sheet" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "sheet" }),
     },
     example: (
       <Sheet>
@@ -464,10 +501,16 @@ export const COMPONENTS = [
     id: "progress",
     name: "Progress",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/progress",
-      yarn: "yarn dlx shadcn@latest add @coss/progress",
-      npm: "npx shadcn@latest add @coss/progress",
-      bun: "bun dlx shadcn@latest add @coss/progress",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "progress",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "progress",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "progress" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "progress" }),
     },
     example: <Progress value={33} />,
   },
@@ -475,10 +518,16 @@ export const COMPONENTS = [
     id: "skeleton",
     name: "Skeleton",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/skeleton",
-      yarn: "yarn dlx shadcn@latest add @coss/skeleton",
-      npm: "npx shadcn@latest add @coss/skeleton",
-      bun: "bun dlx shadcn@latest add @coss/skeleton",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "skeleton",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "skeleton",
+      }),
+      npm: getInstallCommand({ packageManager: "npm", component: "skeleton" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "skeleton" }),
     },
     example: <Skeleton className="w-32 h-4" />,
   },
@@ -486,10 +535,22 @@ export const COMPONENTS = [
     id: "number-field",
     name: "Number field",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/number-field",
-      yarn: "yarn dlx shadcn@latest add @coss/number-field",
-      npm: "npx shadcn@latest add @coss/number-field",
-      bun: "bun dlx shadcn@latest add @coss/number-field",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "number-field",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "number-field",
+      }),
+      npm: getInstallCommand({
+        packageManager: "npm",
+        component: "number-field",
+      }),
+      bun: getInstallCommand({
+        packageManager: "bun",
+        component: "number-field",
+      }),
     },
     example: (
       <NumberField>
@@ -505,10 +566,22 @@ export const COMPONENTS = [
     id: "preview-card",
     name: "Preview card",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/preview-card",
-      yarn: "yarn dlx shadcn@latest add @coss/preview-card",
-      npm: "npx shadcn@latest add @coss/preview-card",
-      bun: "bun dlx shadcn@latest add @coss/preview-card",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "preview-card",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "preview-card",
+      }),
+      npm: getInstallCommand({
+        packageManager: "npm",
+        component: "preview-card",
+      }),
+      bun: getInstallCommand({
+        packageManager: "bun",
+        component: "preview-card",
+      }),
     },
     example: (
       <PreviewCard>
@@ -524,10 +597,10 @@ export const COMPONENTS = [
     id: "popover",
     name: "Popover",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/popover",
-      yarn: "yarn dlx shadcn@latest add @coss/popover",
-      npm: "npx shadcn@latest add @coss/popover",
-      bun: "bun dlx shadcn@latest add @coss/popover",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "popover" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "popover" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "popover" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "popover" }),
     },
     example: (
       <Popover>
@@ -544,10 +617,10 @@ export const COMPONENTS = [
     id: "dialog",
     name: "Dialog",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/dialog",
-      yarn: "yarn dlx shadcn@latest add @coss/dialog",
-      npm: "npx shadcn@latest add @coss/dialog",
-      bun: "bun dlx shadcn@latest add @coss/dialog",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "dialog" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "dialog" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "dialog" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "dialog" }),
     },
     example: (
       <Dialog>
@@ -567,10 +640,22 @@ export const COMPONENTS = [
     id: "alert-dialog",
     name: "Alert dialog",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/alert-dialog",
-      yarn: "yarn dlx shadcn@latest add @coss/alert-dialog",
-      npm: "npx shadcn@latest add @coss/alert-dialog",
-      bun: "bun dlx shadcn@latest add @coss/alert-dialog",
+      pnpm: getInstallCommand({
+        packageManager: "pnpm",
+        component: "alert-dialog",
+      }),
+      yarn: getInstallCommand({
+        packageManager: "yarn",
+        component: "alert-dialog",
+      }),
+      npm: getInstallCommand({
+        packageManager: "npm",
+        component: "alert-dialog",
+      }),
+      bun: getInstallCommand({
+        packageManager: "bun",
+        component: "alert-dialog",
+      }),
     },
     example: (
       <AlertDialog>
@@ -592,10 +677,10 @@ export const COMPONENTS = [
     id: "tooltip",
     name: "Tooltip",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/tooltip",
-      yarn: "yarn dlx shadcn@latest add @coss/tooltip",
-      npm: "npx shadcn@latest add @coss/tooltip",
-      bun: "bun dlx shadcn@latest add @coss/tooltip",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "tooltip" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "tooltip" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "tooltip" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "tooltip" }),
     },
     example: (
       <Tooltip>
@@ -608,10 +693,10 @@ export const COMPONENTS = [
     id: "toggle",
     name: "Toggle",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/toggle",
-      yarn: "yarn dlx shadcn@latest add @coss/toggle",
-      npm: "npx shadcn@latest add @coss/toggle",
-      bun: "bun dlx shadcn@latest add @coss/toggle",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "toggle" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "toggle" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "toggle" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "toggle" }),
     },
     example: <Toggle>B</Toggle>,
   },
@@ -619,10 +704,10 @@ export const COMPONENTS = [
     id: "meter",
     name: "Meter",
     commands: {
-      pnpm: "pnpm dlx shadcn@latest add @coss/meter",
-      yarn: "yarn dlx shadcn@latest add @coss/meter",
-      npm: "npx shadcn@latest add @coss/meter",
-      bun: "bun dlx shadcn@latest add @coss/meter",
+      pnpm: getInstallCommand({ packageManager: "pnpm", component: "meter" }),
+      yarn: getInstallCommand({ packageManager: "yarn", component: "meter" }),
+      npm: getInstallCommand({ packageManager: "npm", component: "meter" }),
+      bun: getInstallCommand({ packageManager: "bun", component: "meter" }),
     },
     example: <Meter value={30} />,
   },

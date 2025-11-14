@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
+import { APP_NAME, APP_URL } from "@/lib/configs";
 
 interface RegistryFile {
   path: string;
@@ -115,13 +116,13 @@ async function buildRegistry() {
   // Build the main registry
   const registry: Registry = {
     $schema: "https://ui.shadcn.com/schema/registry.json",
-    name: "Uruhuu",
-    homepage: "https://uruhuu.vercel.app/",
+    name: APP_NAME,
+    homepage: APP_URL,
     items,
   };
 
   // Write to registry.json
-  const outputPath = path.join(process.cwd(), "registry/registry.json");
+  const outputPath = path.join(process.cwd(), "registry.json");
   fs.writeFileSync(outputPath, JSON.stringify(registry, null, 2));
 
   console.log(
