@@ -16,8 +16,14 @@ export default function Home() {
       id: "editor",
       name: "Editor",
       commands: {
-        pnpm: getInstallCommand({ packageManager: "pnpm", component: "editor" }),
-        yarn: getInstallCommand({ packageManager: "yarn", component: "editor" }),
+        pnpm: getInstallCommand({
+          packageManager: "pnpm",
+          component: "editor",
+        }),
+        yarn: getInstallCommand({
+          packageManager: "yarn",
+          component: "editor",
+        }),
         npm: getInstallCommand({ packageManager: "npm", component: "editor" }),
         bun: getInstallCommand({ packageManager: "bun", component: "editor" }),
       },
@@ -41,10 +47,13 @@ export default function Home() {
       <div className=" grid grid-cols-1 gap-6 py-5">
         {components.map((component) => (
           <div className="flex gap-2 flex-col" key={component.id}>
-            <div className="cpx space-y-3 pb-4">
-              <h2 className="text-xl font-bold">{component.name}</h2>
+            <div className="cpx space-y-2 pb-5">
+              <h1 className="font-medium font-heading text-2xl">
+                {component.name}
+              </h1>
               <CopyButton commands={component.commands} />
             </div>
+
             <FixedBorderSeparator className="" />
             <div className="cpx flex-1">
               {component.examples.map((example) => {

@@ -2,6 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Uruhuu",
   "homepage": "https://uruhuu.vercel.app/",
+  "devDependencies": ["@base-ui-components/react"],
+  "registryDependencies": ["utils"],
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
@@ -47,10 +49,7 @@
       "name": "autocomplete",
       "type": "registry:ui",
       "description": "An input field that provides suggestions as the user types.",
-      "registryDependencies": [
-        "input",
-        "scroll-area"
-      ],
+      "registryDependencies": ["input", "scroll-area"],
       "files": [
         {
           "path": "registry/new-york/ui/autocomplete/index.tsx",
@@ -181,10 +180,7 @@
       "name": "combobox",
       "type": "registry:ui",
       "description": "A combobox component.",
-      "registryDependencies": [
-        "input",
-        "scroll-area"
-      ],
+      "registryDependencies": ["input", "scroll-area"],
       "files": [
         {
           "path": "registry/new-york/ui/combobox/index.tsx",
@@ -397,9 +393,7 @@
         "@lexical/selection@^0.17.1",
         "@lexical/table@^0.17.1"
       ],
-      "devDependencies": [
-        "@types/node@^20.0.0"
-      ],
+      "devDependencies": ["@types/node@^20.0.0"],
       "registryDependencies": [
         "button",
         "tooltip",
@@ -526,9 +520,7 @@
       "name": "group",
       "type": "registry:ui",
       "description": "A group component.",
-      "registryDependencies": [
-        "separator"
-      ],
+      "registryDependencies": ["separator"],
       "files": [
         {
           "path": "registry/new-york/ui/group/index.tsx",
@@ -594,9 +586,7 @@
       "name": "number-field",
       "type": "registry:ui",
       "description": "A number field component.",
-      "registryDependencies": [
-        "label"
-      ],
+      "registryDependencies": ["label"],
       "files": [
         {
           "path": "registry/new-york/ui/number-field/index.tsx",
@@ -610,9 +600,7 @@
       "name": "pagination",
       "type": "registry:ui",
       "description": "A pagination component.",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/new-york/ui/pagination/index.tsx",
@@ -808,9 +796,7 @@
       "name": "toast",
       "type": "registry:ui",
       "description": "A toast component.",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/new-york/ui/toast/index.tsx",
@@ -837,10 +823,7 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "description": "A toggle group component.",
-      "registryDependencies": [
-        "separator",
-        "toggle"
-      ],
+      "registryDependencies": ["separator", "toggle"],
       "files": [
         {
           "path": "registry/new-york/ui/toggle-group/index.tsx",

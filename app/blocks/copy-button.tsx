@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   Menu,
   MenuGroup,
@@ -27,23 +26,20 @@ export const CopyButton = ({
     }
   };
   return (
-    <div className="w-fit rounded bg-muted/80 flex items-center gap-2.5 px-2 py-1 border border-border/80">
-      <code className="font-mono text-xs text-muted-foreground break-all">
-        {commands.pnpm}
-      </code>
+    <div className="">
       <Menu>
         <MenuTrigger
           render={
-            <button
-              type="button"
-              className=""
+            <div
+              className=" flex items-center gap-3 text-muted-foreground border border-dashed w-fit px-1.5 py-0.5 cursor-pointer select-none"
               aria-label="Copy install command"
             />
           }
         >
+          <p className="text-muted-foreground text-sm">{commands.pnpm}</p>
           {copied ? (
             <svg
-              className="h-4 w-4"
+              className="size-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -58,7 +54,7 @@ export const CopyButton = ({
             </svg>
           ) : (
             <svg
-              className="h-4 w-4"
+              className="size-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

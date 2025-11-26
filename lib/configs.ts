@@ -1,4 +1,4 @@
-export const APP_URL = "https://uruhuu.vercel.app/";
+export const APP_URL = "https://uruhuu.vercel.app";
 export const AUTHOR = "Nkurunziza Saddy";
 export const AUTHOR_EMAIL = "saddynkurunziza8@gmail.com";
 export const REPO_URL = "https://github.com/nkurunziza-saddy/base-ui-variant";
