@@ -188,6 +188,6 @@ export default function TableHoverActionsPlugin() {
         </MenuPopup>
       </Menu>
     </div>,
-    document.body,
+    document.body
   );
 }

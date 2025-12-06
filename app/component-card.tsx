@@ -82,17 +82,13 @@ export function ComponentCard({
             <MenuGroup>
               <MenuGroupLabel>Commands</MenuGroupLabel>
               <MenuItem onClick={() => copyCommand(commands.pnpm)}>
-                Copy PNPM Command
+                pnpm
               </MenuItem>
               <MenuItem onClick={() => copyCommand(commands.yarn)}>
-                Copy Yarn Command
+                yarn
               </MenuItem>
-              <MenuItem onClick={() => copyCommand(commands.npm)}>
-                Copy NPM Command
-              </MenuItem>
-              <MenuItem onClick={() => copyCommand(commands.bun)}>
-                Copy Bun Command
-              </MenuItem>
+              <MenuItem onClick={() => copyCommand(commands.npm)}>npm</MenuItem>
+              <MenuItem onClick={() => copyCommand(commands.bun)}>bun</MenuItem>
             </MenuGroup>
           </MenuPopup>
         </Menu>

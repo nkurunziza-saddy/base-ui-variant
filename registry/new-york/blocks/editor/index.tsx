@@ -77,7 +77,7 @@ function EditorPlugins({
   onChange: (
     editorState: EditorState,
     editor: LexicalEditor,
-    tags: Set<string>,
+    tags: Set<string>
   ) => void;
 }) {
   return (
@@ -89,7 +89,7 @@ function EditorPlugins({
       <LinkPlugin />
 
       <HorizontalRulePlugin />
-      {/* Table plugins - order matters! */}
+      {/* table plugins - order matters */}
       <TablePlugin
         hasCellBackgroundColor={true}
         hasCellMerge={true}
@@ -135,7 +135,7 @@ export function Editor({
       setEditorState(jsonString);
       onChange?.(jsonString);
     },
-    [onChange],
+    [onChange]
   );
 
   return (

@@ -4,7 +4,7 @@
   "type": "registry:ui",
   "description": "A group component.",
   "registryDependencies": [
-    "separator"
+    "http://localhost:3000/r/separator.json"
   ],
   "files": [
     {

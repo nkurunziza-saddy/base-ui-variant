@@ -5,27 +5,30 @@
   "title": "Rich Text Editor",
   "description": "A powerful Lexical-based rich text editor with markdown support, slash commands, floating toolbar, and table editing capabilities. Built with Tailwind v4 and OKLCH colors.",
   "dependencies": [
-    "@lexical/react",
-    "@lexical/utils",
-    "lexical",
-    "@lexical/code",
-    "@lexical/html",
-    "@lexical/link",
-    "@lexical/list",
-    "@lexical/markdown",
-    "@lexical/rich-text",
-    "@lexical/selection",
-    "@lexical/table"
+    "@lexical/react@^0.17.1",
+    "@lexical/utils@^0.17.1",
+    "lexical@^0.17.1",
+    "@lexical/code@^0.17.1",
+    "@lexical/html@^0.17.1",
+    "@lexical/link@^0.17.1",
+    "@lexical/list@^0.17.1",
+    "@lexical/markdown@^0.17.1",
+    "@lexical/rich-text@^0.17.1",
+    "@lexical/selection@^0.17.1",
+    "@lexical/table@^0.17.1"
+  ],
+  "devDependencies": [
+    "@types/node@^20.0.0"
   ],
   "registryDependencies": [
-    "button",
-    "tooltip",
-    "popover",
-    "menu",
-    "dialog",
-    "input",
-    "label",
-    "separator"
+    "http://localhost:3000/r/button.json",
+    "http://localhost:3000/r/tooltip.json",
+    "http://localhost:3000/r/popover.json",
+    "http://localhost:3000/r/menu.json",
+    "http://localhost:3000/r/dialog.json",
+    "http://localhost:3000/r/input.json",
+    "http://localhost:3000/r/label.json",
+    "http://localhost:3000/r/separator.json"
   ],
   "files": [
     {

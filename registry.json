@@ -1,9 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Uruhuu",
-  "homepage": "https://uruhuu.vercel.app/",
-  "devDependencies": ["@base-ui-components/react"],
-  "registryDependencies": ["utils"],
+  "homepage": "https://uruhuu.vercel.app",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
@@ -49,7 +47,10 @@
       "name": "autocomplete",
       "type": "registry:ui",
       "description": "An input field that provides suggestions as the user types.",
-      "registryDependencies": ["input", "scroll-area"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/input.json",
+        "https://uruhuu.vercel.app/r/scroll-area.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/autocomplete/index.tsx",
@@ -180,7 +181,10 @@
       "name": "combobox",
       "type": "registry:ui",
       "description": "A combobox component.",
-      "registryDependencies": ["input", "scroll-area"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/input.json",
+        "https://uruhuu.vercel.app/r/scroll-area.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/combobox/index.tsx",
@@ -393,16 +397,18 @@
         "@lexical/selection@^0.17.1",
         "@lexical/table@^0.17.1"
       ],
-      "devDependencies": ["@types/node@^20.0.0"],
+      "devDependencies": [
+        "@types/node@^20.0.0"
+      ],
       "registryDependencies": [
-        "button",
-        "tooltip",
-        "popover",
-        "menu",
-        "dialog",
-        "input",
-        "label",
-        "separator"
+        "https://uruhuu.vercel.app/r/button.json",
+        "https://uruhuu.vercel.app/r/tooltip.json",
+        "https://uruhuu.vercel.app/r/popover.json",
+        "https://uruhuu.vercel.app/r/menu.json",
+        "https://uruhuu.vercel.app/r/dialog.json",
+        "https://uruhuu.vercel.app/r/input.json",
+        "https://uruhuu.vercel.app/r/label.json",
+        "https://uruhuu.vercel.app/r/separator.json"
       ],
       "cssVars": {
         "light": {
@@ -520,7 +526,9 @@
       "name": "group",
       "type": "registry:ui",
       "description": "A group component.",
-      "registryDependencies": ["separator"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/separator.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/group/index.tsx",
@@ -586,7 +594,9 @@
       "name": "number-field",
       "type": "registry:ui",
       "description": "A number field component.",
-      "registryDependencies": ["label"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/number-field/index.tsx",
@@ -600,7 +610,9 @@
       "name": "pagination",
       "type": "registry:ui",
       "description": "A pagination component.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/button.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/pagination/index.tsx",
@@ -796,7 +808,9 @@
       "name": "toast",
       "type": "registry:ui",
       "description": "A toast component.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/button.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/toast/index.tsx",
@@ -823,7 +837,10 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "description": "A toggle group component.",
-      "registryDependencies": ["separator", "toggle"],
+      "registryDependencies": [
+        "https://uruhuu.vercel.app/r/separator.json",
+        "https://uruhuu.vercel.app/r/toggle.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/ui/toggle-group/index.tsx",
@@ -855,6 +872,23 @@
           "path": "registry/new-york/ui/tooltip/index.tsx",
           "type": "registry:ui",
           "target": "components/ui/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "Utility functions for className merging with Tailwind CSS",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/libs/utils/index.ts",
+          "type": "registry:lib",
+          "target": "lib/utils.ts"
         }
       ]
     }

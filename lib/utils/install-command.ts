@@ -5,34 +5,46 @@ type PackageManager = "npm" | "yarn" | "pnpm" | "bun";
 interface InstallCommandOptions {
   packageManager: PackageManager;
   component: string | "all";
-  style?: "new-york" | "default";
   baseUrl?: string;
 }
 
 export function getInstallCommand({
   packageManager = "npm",
   component,
-  style = "new-york",
   baseUrl = APP_URL,
 }: InstallCommandOptions): string {
-  const pm = packageManager === "npm" ? "npx" : `${packageManager} dlx`;
-
-  if (component === "all") {
-    return `${pm} shadcn@latest add ${baseUrl}/r/index.json`;
+  let command_prefix = "";
+  if (packageManager === "npm") {
+    command_prefix = "npx";
+  } else if (packageManager === "bun") {
+    command_prefix = "bunx";
+  } else {
+    command_prefix = `${packageManager} dlx`;
   }
 
-  return `${pm} shadcn@latest add ${baseUrl}/r/${component}.json`;
+  if (component === "all") {
+    return `${command_prefix} shadcn@latest add ${baseUrl}/r/index.json`;
+  }
+
+  return `${command_prefix} shadcn@latest add ${baseUrl}/r/${component}.json`;
 }
 
 export function getNamespaceInstallCommand({
   packageManager = "npm",
   component,
-}: Omit<InstallCommandOptions, "style" | "baseUrl">): string {
-  const pm = packageManager === "npm" ? "npx" : `${packageManager} dlx`;
-
-  if (component === "all") {
-    return `${pm} shadcn@latest add uruhuu`;
+}: Omit<InstallCommandOptions, "baseUrl">): string {
+  let command_prefix = "";
+  if (packageManager === "npm") {
+    command_prefix = "npx";
+  } else if (packageManager === "bun") {
+    command_prefix = "bunx";
+  } else {
+    command_prefix = `${packageManager} dlx`;
   }
 
-  return `${pm} shadcn@latest add uruhuu:${component}`;
+  if (component === "all") {
+    return `${command_prefix} shadcn@latest add uruhuu`;
+  }
+
+  return `${command_prefix} shadcn@latest add uruhuu:${component}`;
 }

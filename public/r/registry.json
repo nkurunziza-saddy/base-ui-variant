@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Uruhuu",
-  "homepage": "https://uruhuu.vercel.app/",
+  "homepage": "https://uruhuu.vercel.app",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
@@ -48,8 +48,8 @@
       "type": "registry:ui",
       "description": "An input field that provides suggestions as the user types.",
       "registryDependencies": [
-        "input",
-        "scroll-area"
+        "http://localhost:3000/r/input.json",
+        "http://localhost:3000/r/scroll-area.json"
       ],
       "files": [
         {
@@ -182,8 +182,8 @@
       "type": "registry:ui",
       "description": "A combobox component.",
       "registryDependencies": [
-        "input",
-        "scroll-area"
+        "http://localhost:3000/r/input.json",
+        "http://localhost:3000/r/scroll-area.json"
       ],
       "files": [
         {
@@ -401,14 +401,14 @@
         "@types/node@^20.0.0"
       ],
       "registryDependencies": [
-        "button",
-        "tooltip",
-        "popover",
-        "menu",
-        "dialog",
-        "input",
-        "label",
-        "separator"
+        "http://localhost:3000/r/button.json",
+        "http://localhost:3000/r/tooltip.json",
+        "http://localhost:3000/r/popover.json",
+        "http://localhost:3000/r/menu.json",
+        "http://localhost:3000/r/dialog.json",
+        "http://localhost:3000/r/input.json",
+        "http://localhost:3000/r/label.json",
+        "http://localhost:3000/r/separator.json"
       ],
       "cssVars": {
         "light": {
@@ -527,7 +527,7 @@
       "type": "registry:ui",
       "description": "A group component.",
       "registryDependencies": [
-        "separator"
+        "http://localhost:3000/r/separator.json"
       ],
       "files": [
         {
@@ -595,7 +595,7 @@
       "type": "registry:ui",
       "description": "A number field component.",
       "registryDependencies": [
-        "label"
+        "http://localhost:3000/r/label.json"
       ],
       "files": [
         {
@@ -611,7 +611,7 @@
       "type": "registry:ui",
       "description": "A pagination component.",
       "registryDependencies": [
-        "button"
+        "http://localhost:3000/r/button.json"
       ],
       "files": [
         {
@@ -809,7 +809,7 @@
       "type": "registry:ui",
       "description": "A toast component.",
       "registryDependencies": [
-        "button"
+        "http://localhost:3000/r/button.json"
       ],
       "files": [
         {
@@ -838,8 +838,8 @@
       "type": "registry:ui",
       "description": "A toggle group component.",
       "registryDependencies": [
-        "separator",
-        "toggle"
+        "http://localhost:3000/r/separator.json",
+        "http://localhost:3000/r/toggle.json"
       ],
       "files": [
         {
@@ -872,6 +872,23 @@
           "path": "registry/new-york/ui/tooltip/index.tsx",
           "type": "registry:ui",
           "target": "components/ui/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "Utility functions for className merging with Tailwind CSS",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/libs/utils/index.ts",
+          "type": "registry:lib",
+          "target": "lib/utils.ts"
         }
       ]
     }

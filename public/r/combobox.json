@@ -4,8 +4,8 @@
   "type": "registry:ui",
   "description": "A combobox component.",
   "registryDependencies": [
-    "input",
-    "scroll-area"
+    "http://localhost:3000/r/input.json",
+    "http://localhost:3000/r/scroll-area.json"
   ],
   "files": [
     {

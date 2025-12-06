@@ -141,7 +141,7 @@ export function Toolbar() {
         newToolbarState.blockType = blockType;
 
         const cell = $findMatchingParent(anchorNode, (node) =>
-          $isTableCellNode(node),
+          $isTableCellNode(node)
         );
         newToolbarState.isTable = cell !== null;
 
@@ -188,8 +188,8 @@ export function Toolbar() {
           updateToolbar();
           return false;
         },
-        COMMAND_PRIORITY_CRITICAL,
-      ),
+        COMMAND_PRIORITY_CRITICAL
+      )
     );
   }, [editor, updateToolbar]);
 
@@ -200,7 +200,7 @@ export function Toolbar() {
         dispatch({ type: "SET_CAN_UNDO", payload });
         return false;
       },
-      COMMAND_PRIORITY_CRITICAL,
+      COMMAND_PRIORITY_CRITICAL
     );
   }, [editor]);
 
@@ -211,7 +211,7 @@ export function Toolbar() {
         dispatch({ type: "SET_CAN_REDO", payload });
         return false;
       },
-      COMMAND_PRIORITY_CRITICAL,
+      COMMAND_PRIORITY_CRITICAL
     );
   }, [editor]);
 
@@ -247,7 +247,7 @@ export function Toolbar() {
   };
 
   return (
-    <div className="flex relative items-center gap-1 p-3 border-b bg-linear-to-r from-background via-background to-accent/5 backdrop-blur-sm flex-wrap">
+    <div className="flex relative items-center gap-1 p-3 border-b flex-wrap">
       <HistoryButtons
         canRedo={toolbarState.canRedo}
         canUndo={toolbarState.canUndo}

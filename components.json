@@ -20,6 +20,6 @@
   },
   "registries": {
     "@coss": "https://coss.com/ui/r/{name}.json",
-    "@uruhuu": "https://https://uruhuu.vercel.app/r/{name}.json"
+    "@uruhuu": "https://uruhuu.vercel.app/r/{name}.json"
   }
 }

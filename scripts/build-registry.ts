@@ -45,7 +45,6 @@ async function buildRegistry() {
 
   const registryDir = path.join(process.cwd(), "registry/new-york");
 
-  // Find all index.json files (component metadata)
   const itemFiles = await glob("**/index.json", {
     cwd: registryDir,
     absolute: true,
@@ -62,7 +61,6 @@ async function buildRegistry() {
       const content = fs.readFileSync(itemFile, "utf-8");
       const item: RegistryItem = JSON.parse(content);
 
-      // Validate required fields
       if (!item.name) {
         errors.push(`${itemFile}: missing 'name' field`);
         continue;
@@ -78,7 +76,6 @@ async function buildRegistry() {
         continue;
       }
 
-      // Validate all file paths exist
       for (const file of item.files) {
         const filePath = path.join(process.cwd(), file.path);
         if (!fs.existsSync(filePath)) {
@@ -89,7 +86,6 @@ async function buildRegistry() {
       items.push(item);
       console.log(`  ✅ ${item.name} (${item.type})`);
 
-      // Show dependencies if any
       if (item.registryDependencies && item.registryDependencies.length > 0) {
         console.log(
           `     └─ Depends on: ${item.registryDependencies.join(", ")}`
@@ -103,25 +99,33 @@ async function buildRegistry() {
     }
   }
 
-  // Report errors
   if (errors.length > 0) {
     console.error(`\n❌ Found ${errors.length} error(s):\n`);
     errors.forEach((err) => console.error(`   - ${err}`));
     process.exit(1);
   }
 
-  // Sort items alphabetically by name
   items.sort((a, b) => a.name.localeCompare(b.name));
 
-  // Build the main registry
+  const registryUrl = process.env.REGISTRY_URL || APP_URL;
   const registry: Registry = {
     $schema: "https://ui.shadcn.com/schema/registry.json",
     name: APP_NAME,
     homepage: APP_URL,
-    items,
+    items: items.map((item) => {
+      if (item.registryDependencies) {
+        item.registryDependencies = item.registryDependencies.map((dep) => {
+          if (dep.startsWith("http") || dep.startsWith("https")) {
+            return dep;
+          }
+
+          return `${registryUrl}/r/${dep}.json`;
+        });
+      }
+      return item;
+    }),
   };
 
-  // Write to registry.json
   const outputPath = path.join(process.cwd(), "registry.json");
   fs.writeFileSync(outputPath, JSON.stringify(registry, null, 2));
 
@@ -130,7 +134,6 @@ async function buildRegistry() {
   );
   console.log(`📝 Output: ${outputPath}`);
 
-  // Generate statistics
   const stats = {
     total: items.length,
     ui: items.filter((i) => i.type === "registry:ui").length,
@@ -146,7 +149,6 @@ async function buildRegistry() {
   console.log(`   - Hooks: ${stats.hooks}`);
   console.log(`   - Libraries: ${stats.lib}`);
 
-  // Check for missing dependencies
   console.log("\n🔍 Checking dependencies...");
   const allNames = new Set(items.map((i) => i.name));
   const missingDeps: string[] = [];
@@ -154,7 +156,15 @@ async function buildRegistry() {
   for (const item of items) {
     if (item.registryDependencies) {
       for (const dep of item.registryDependencies) {
-        if (!allNames.has(dep)) {
+        let depName = dep;
+
+        if (dep.startsWith("http") || dep.startsWith("https")) {
+          const urlParts = dep.split("/");
+          const fileName = urlParts[urlParts.length - 1];
+          depName = fileName.replace(".json", "");
+        }
+
+        if (!allNames.has(depName)) {
           missingDeps.push(`${item.name} depends on missing component: ${dep}`);
         }
       }
@@ -171,7 +181,6 @@ async function buildRegistry() {
   console.log("\n✨ Done!\n");
 }
 
-// Run the build
 buildRegistry().catch((error) => {
   console.error("❌ Build failed:", error);
   process.exit(1);
