@@ -4,6 +4,7 @@ import { Editor } from "@/registry/new-york/blocks/editor";
 import { FixedBorderSeparator } from "@/registry/new-york/ui/border-separator";
 import type { Metadata } from "next";
 import { CopyButton } from "../copy-button";
+import { HighlightCodeBlock } from "@/components/code-block";
 
 export const metadata: Metadata = {
   title: `Editor Block - ${APP_NAME}`,
@@ -70,8 +71,8 @@ export default function EditorPage() {
             <div className="cpx py-8 space-y-8">
               <section>
                 <h2 className="text-xl font-bold mb-4">Usage</h2>
-                <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                  <pre>{`import { Editor } from "@/registry/new-york/blocks/editor";
+                <HighlightCodeBlock
+                  code={`import { Editor } from "@/registry/new-york/blocks/editor";
 
 // Basic usage
 <Editor />
@@ -83,8 +84,9 @@ export default function EditorPage() {
   enableSpeechToText
   placeholder="Start writing..."
   onChange={(value) => console.log(value)}
-/>`}</pre>
-                </div>
+/>`}
+                  language="tsx"
+                />
               </section>
 
               <section>

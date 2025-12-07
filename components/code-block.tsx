@@ -23,3 +23,20 @@ export function CodeBlock({ code, language = "tsx" }: CodeBlockProps) {
     </pre>
   );
 }
+
+export async function HighlightCodeBlock({
+  code,
+  language = "tsx",
+}: CodeBlockProps) {
+  return (
+    <div
+      className="rounded-lg border overflow-hidden [&_pre]:p-4 [&_pre]:text-sm [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
+      dangerouslySetInnerHTML={{
+        __html: await codeToHtml(code, {
+          lang: language,
+          theme: "vitesse-dark",
+        }),
+      }}
+    />
+  );
+}

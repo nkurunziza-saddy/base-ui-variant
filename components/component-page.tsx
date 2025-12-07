@@ -2,6 +2,7 @@ import { PreviewCard } from "./preview-card";
 import { InstallTabs } from "./install-tabs";
 import { COMPONENTS } from "@/lib/constants/components";
 import { codeToHtml } from "shiki";
+import { HighlightCodeBlock } from "./code-block";
 
 export async function ComponentPage({
   component,
@@ -53,19 +54,14 @@ export async function ComponentPage({
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Usage
         </h2>
-        <div
-          className="rounded-lg border overflow-hidden [&_pre]:p-4 [&_pre]:text-sm [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
-          dangerouslySetInnerHTML={{
-            __html: await codeToHtml(
-              `import { ${component.name.replace(
-                /\s+/g,
-                ""
-              )} } from "@/components/ui/${
-                component.id
-              }";\n\n<${component.name.replace(/\s+/g, "")} />`,
-              { lang: "tsx", theme: "vitesse-dark" }
-            ),
-          }}
+        <HighlightCodeBlock
+          code={`import { ${component.name.replace(
+            /\s+/g,
+            ""
+          )} } from "@/components/ui/${
+            component.id
+          }";\n\n<${component.name.replace(/\s+/g, "")} />`}
+          language="tsx"
         />
       </section>
 
