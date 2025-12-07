@@ -2,7 +2,7 @@
 
 import { Avatar as AvatarPrimitive } from "@base-ui-components/react/avatar";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Avatar({ className, ...props }: AvatarPrimitive.Root.Props) {
   return (
@@ -10,7 +10,7 @@ function Avatar({ className, ...props }: AvatarPrimitive.Root.Props) {
       data-slot="avatar"
       className={cn(
         "inline-flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-background align-middle text-xs font-medium select-none",
-        className,
+        className
       )}
       {...props}
     />
@@ -36,7 +36,7 @@ function AvatarFallback({
       data-slot="avatar-fallback"
       className={cn(
         "flex size-full items-center justify-center rounded-full bg-muted",
-        className,
+        className
       )}
       {...props}
     />

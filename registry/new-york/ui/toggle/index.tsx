@@ -3,7 +3,7 @@
 import { Toggle as TogglePrimitive } from "@base-ui-components/react/toggle";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 const toggleVariants = cva(
   "relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded border text-sm font-medium whitespace-nowrap outline-none select-none hover:bg-accent/50 focus-visible:ring-1 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-64 data-pressed:bg-accent data-pressed:text-accent-foreground data-pressed:transition-none dark:hover:bg-accent dark:data-pressed:bg-input/80 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
@@ -23,7 +23,7 @@ const toggleVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 function Toggle({

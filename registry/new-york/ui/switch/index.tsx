@@ -2,21 +2,21 @@
 
 import { Switch as SwitchPrimitive } from "@base-ui-components/react/switch";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Switch({ className, ...props }: SwitchPrimitive.Root.Props) {
   return (
     <SwitchPrimitive.Root
       className={cn(
         "group/switch inline-flex h-4.5 w-7.5 shrink-0 items-center rounded-full p-px outline-none focus-visible:ring-1 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-64 data-checked:bg-primary data-unchecked:bg-input",
-        className,
+        className
       )}
       data-slot="switch"
       {...props}
     >
       <SwitchPrimitive.Thumb
         className={cn(
-          "pointer-events-none block size-4 rounded-full bg-background transition-[translate,width] group-active/switch:w-4.5 data-checked:translate-x-3 data-checked:group-active/switch:translate-x-2.5 data-unchecked:translate-x-0",
+          "pointer-events-none block size-4 rounded-full bg-background transition-[translate,width] group-active/switch:w-4.5 data-checked:translate-x-3 data-checked:group-active/switch:translate-x-2.5 data-unchecked:translate-x-0"
         )}
         data-slot="switch-thumb"
       />

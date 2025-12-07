@@ -1,4 +1,4 @@
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 interface Props {
   orientation?: "vertical" | "horizontal";
@@ -8,7 +8,7 @@ const Separator = ({ orientation = "vertical" }: Props) => {
     <div
       className={cn(
         "bg-linear-to-b from-transparent via-border to-transparent mx-2",
-        orientation === "horizontal" ? "h-px w-6 my-2" : "w-px h-6 mx-2",
+        orientation === "horizontal" ? "h-px w-6 my-2" : "w-px h-6 mx-2"
       )}
     />
   );

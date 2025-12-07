@@ -10,7 +10,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GithubIcon, XIcon } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 import { Button } from "@/registry/new-york/ui/button";
 import Sidebar from "@/components/sidebar";
 

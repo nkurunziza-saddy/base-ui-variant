@@ -1,4 +1,4 @@
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 import type { SlashCommand } from "./slash-command-items";
 
 interface SlashCommandMenuItemProps {
@@ -21,7 +21,7 @@ export function SlashCommandMenuItem({
         className={cn(
           "flex items-center group gap-3 p-2 rounded cursor-pointer transition-colors",
           "w-full appearance-none",
-          isSelected ? "bg-muted" : "hover:bg-muted/50",
+          isSelected ? "bg-muted" : "hover:bg-muted/50"
         )}
         onClick={onClick}
         onMouseEnter={onMouseEnter}

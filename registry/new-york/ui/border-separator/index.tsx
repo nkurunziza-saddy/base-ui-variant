@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 export function BorderSeparator({
   children,
@@ -11,7 +11,7 @@ export function BorderSeparator({
       aria-hidden="true"
       className={cn(
         "-translate-x-1/2 pointer-events-none absolute left-1/2 w-screen border-t border-dashed",
-        className,
+        className
       )}
       {...props}
     >

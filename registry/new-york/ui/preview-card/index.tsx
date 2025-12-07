@@ -2,7 +2,7 @@
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui-components/react/preview-card";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 const PreviewCard = PreviewCardPrimitive.Root;
 
@@ -34,7 +34,7 @@ function PreviewCardPopup({
           data-slot="preview-card-content"
           className={cn(
             "relative flex w-64 origin-(--transform-origin) rounded border bg-popover p-3 text-sm text-balance text-popover-foreground transition-[scale,opacity] data-ending-style:scale-98 data-ending-style:opacity-0 data-starting-style:scale-98 data-starting-style:opacity-0",
-            className,
+            className
           )}
           {...props}
         >

@@ -2,7 +2,7 @@
 
 import { Popover as PopoverPrimitive } from "@base-ui-components/react/popover";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 const Popover = PopoverPrimitive.Root;
 
@@ -36,7 +36,7 @@ function PopoverPopup({
             data-slot="popover-content"
             className={cn(
               "max-h-(--available-height) min-w-80 overflow-y-auto p-3",
-              className,
+              className
             )}
             {...props}
           >

@@ -2,7 +2,7 @@
 
 import { Toolbar as ToolbarPrimitive } from "@base-ui-components/react/toolbar";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Toolbar({ className, ...props }: ToolbarPrimitive.Root.Props) {
   return (
@@ -10,7 +10,7 @@ function Toolbar({ className, ...props }: ToolbarPrimitive.Root.Props) {
       data-slot="toolbar"
       className={cn(
         "relative flex gap-2 rounded-xl border bg-card p-1 text-card-foreground",
-        className,
+        className
       )}
       {...props}
     />
@@ -69,7 +69,7 @@ function ToolbarSeparator({
       data-slot="toolbar-separator"
       className={cn(
         "shrink-0 bg-border data-[orientation=horizontal]:my-0.5 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:my-1.5 data-[orientation=vertical]:w-px data-[orientation=vertical]:not-[[class^='h-']]:not-[[class*='_h-']]:self-stretch",
-        className,
+        className
       )}
       {...props}
     />

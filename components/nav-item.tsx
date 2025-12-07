@@ -3,7 +3,7 @@
 import { Button } from "@/registry/new-york/ui/button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 export default function NavItem({
   item,

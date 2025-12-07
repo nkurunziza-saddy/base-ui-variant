@@ -7,7 +7,7 @@ import {
   ChevronUpIcon,
 } from "lucide-react";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
 
@@ -26,7 +26,7 @@ function SelectTrigger({
         "relative inline-flex w-full min-w-36 items-center justify-between gap-2 rounded border border-input bg-background px-3 py-1.5 text-sm outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 in-data-[slot=field]:not-data-filled:text-muted-foreground aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16 data-disabled:pointer-events-none data-disabled:opacity-64 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         size === "sm" && "gap-1.5 px-2.5 py-1",
         size === "lg" && "py-2",
-        className,
+        className
       )}
       {...props}
     >
@@ -82,7 +82,7 @@ function SelectPopup({
               data-slot="select-list"
               className={cn(
                 "max-h-(--available-height) min-w-(--anchor-width) overflow-y-auto p-1",
-                className,
+                className
               )}
             >
               {children}
@@ -110,7 +110,7 @@ function SelectItem({
       data-slot="select-item"
       className={cn(
         "grid cursor-default grid-cols-[1rem_1fr] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-none in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] data-disabled:pointer-events-none data-disabled:opacity-64 data-highlighted:bg-accent data-highlighted:text-accent-foreground sm:text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        className,
+        className
       )}
       {...props}
     >

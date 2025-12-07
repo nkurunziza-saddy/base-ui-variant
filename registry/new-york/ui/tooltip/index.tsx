@@ -2,7 +2,7 @@
 
 import { Tooltip as TooltipPrimitive } from "@base-ui-components/react/tooltip";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 const TooltipProvider = TooltipPrimitive.Provider;
 
@@ -37,7 +37,7 @@ function TooltipPopup({
           data-slot="tooltip-content"
           className={cn(
             "relative flex w-fit origin-(--transform-origin) rounded border bg-popover px-2 py-1 text-xs text-balance text-popover-foreground transition-[scale,opacity] data-ending-style:scale-98 data-ending-style:opacity-0 data-instant:duration-0 data-starting-style:scale-98 data-starting-style:opacity-0",
-            className,
+            className
           )}
           {...props}
         >

@@ -3,7 +3,7 @@
 import { Dialog as SheetPrimitive } from "@base-ui-components/react/dialog";
 import { XIcon } from "lucide-react";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Sheet(props: SheetPrimitive.Root.Props) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />;
@@ -26,7 +26,7 @@ function SheetBackdrop({ className, ...props }: SheetPrimitive.Backdrop.Props) {
     <SheetPrimitive.Backdrop
       className={cn(
         "fixed inset-0 z-50 bg-black/32 backdrop-blur-sm transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
-        className,
+        className
       )}
       data-slot="sheet-backdrop"
       {...props}
@@ -58,7 +58,7 @@ function SheetPopup({
             "inset-x-0 top-0 h-auto data-ending-style:-translate-y-full data-starting-style:-translate-y-full",
           side === "bottom" &&
             "inset-x-0 bottom-0 h-auto data-ending-style:translate-y-full data-starting-style:translate-y-full",
-          className,
+          className
         )}
         data-slot="sheet-popup"
         {...props}

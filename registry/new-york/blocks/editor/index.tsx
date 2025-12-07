@@ -16,7 +16,7 @@ import { TablePlugin } from "@lexical/react/LexicalTablePlugin";
 import type { EditorState, LexicalEditor } from "lexical";
 import type React from "react";
 import { useCallback, useMemo, useRef } from "react";
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 import { EDITOR_CONFIG } from "./lib/configs";
 import type { EditorProps } from "./lib/types/editor";
 import { FloatingToolbar } from "./plugins/floating-toolbar";

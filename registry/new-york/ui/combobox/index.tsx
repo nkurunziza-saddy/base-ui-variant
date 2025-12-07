@@ -4,7 +4,7 @@ import * as React from "react";
 import { Combobox as ComboboxPrimitive } from "@base-ui-components/react/combobox";
 import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 import { Input } from "@/registry/new-york/ui/input";
 import { ScrollArea } from "@/registry/new-york/ui/scroll-area";
 

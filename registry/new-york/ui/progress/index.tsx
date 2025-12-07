@@ -2,7 +2,7 @@
 
 import { Progress as ProgressPrimitive } from "@base-ui-components/react/progress";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Progress({
   className,
@@ -42,7 +42,7 @@ function ProgressTrack({ className, ...props }: ProgressPrimitive.Track.Props) {
       data-slot="progress-track"
       className={cn(
         "block h-1.5 w-full overflow-hidden rounded-full bg-input",
-        className,
+        className
       )}
       {...props}
     />

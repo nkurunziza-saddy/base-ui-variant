@@ -3,7 +3,7 @@
 import { Slider as SliderPrimitive } from "@base-ui-components/react/slider";
 import * as React from "react";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Slider({
   className,
@@ -38,7 +38,7 @@ function Slider({
       <SliderPrimitive.Control
         className={cn(
           "flex touch-none select-none data-disabled:opacity-64 data-disabled:pointer-events-none data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:flex-col",
-          className,
+          className
         )}
         data-slot="slider-control"
       >

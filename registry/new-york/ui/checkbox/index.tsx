@@ -2,14 +2,14 @@
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
 
-import { cn } from "@/registry/new-york/libs/utils";
+import { cn } from "@/lib/utils";
 
 function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (
     <CheckboxPrimitive.Root
       className={cn(
         "relative inline-flex size-4 shrink-0 items-center justify-center rounded-lg border border-input bg-background outline-none focus-visible:ring-1 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-64 aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16",
-        className,
+        className
       )}
       data-slot="checkbox"
       {...props}
