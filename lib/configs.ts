@@ -22,5 +22,3 @@ export const KEYWORDS = [
   "design",
   "web development",
 ];
-
-export const DEFAULT_BRANCH = "main";
