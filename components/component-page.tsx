@@ -1,12 +1,20 @@
 import { PreviewCard } from "./preview-card";
 import { InstallTabs } from "./install-tabs";
 import { COMPONENTS } from "@/lib/constants/components";
+import { codeToHtml } from "shiki";
 
-export function ComponentPage({
+export async function ComponentPage({
   component,
 }: {
   component: (typeof COMPONENTS)[number];
 }) {
+  const highlightedCode = component.code
+    ? await codeToHtml(component.code, {
+        lang: "tsx",
+        theme: "github-dark-default",
+      })
+    : undefined;
+
   return (
     <div className="space-y-8">
       <div>
@@ -21,7 +29,11 @@ export function ComponentPage({
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Preview
         </h2>
-        <PreviewCard fullWidth={component.fullWidth} code={component.code}>
+        <PreviewCard
+          fullWidth={component.fullWidth}
+          code={component.code}
+          highlightedCode={highlightedCode}
+        >
           {component.example}
         </PreviewCard>
       </section>
@@ -41,16 +53,20 @@ export function ComponentPage({
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Usage
         </h2>
-        <div className="rounded-lg border bg-muted/40 p-4">
-          <pre className="text-sm font-mono overflow-x-auto">
-            <code>{`import { ${component.name.replace(
-              /\s+/g,
-              ""
-            )} } from "@/registry/new-york/ui/${component.id}";
-
-<${component.name.replace(/\s+/g, "")} />`}</code>
-          </pre>
-        </div>
+        <div
+          className="rounded-lg border overflow-hidden [&_pre]:p-4 [&_pre]:text-sm [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
+          dangerouslySetInnerHTML={{
+            __html: await codeToHtml(
+              `import { ${component.name.replace(
+                /\s+/g,
+                ""
+              )} } from "@/components/ui/${
+                component.id
+              }";\n\n<${component.name.replace(/\s+/g, "")} />`,
+              { lang: "tsx", theme: "github-dark-default" }
+            ),
+          }}
+        />
       </section>
 
       {component.props && component.props.length > 0 && (

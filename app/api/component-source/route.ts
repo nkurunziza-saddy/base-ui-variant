@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
+import { codeToHtml } from "shiki";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -26,10 +27,14 @@ export async function GET(request: NextRequest) {
     );
 
     const source = await readFile(filePath, "utf-8");
-    return new NextResponse(source, {
-      headers: {
-        "Content-Type": "text/plain",
-      },
+    const highlighted = await codeToHtml(source, {
+      lang: "tsx",
+      theme: "github-dark-default",
+    });
+
+    return NextResponse.json({
+      source,
+      highlighted,
     });
   } catch (error) {
     return NextResponse.json({ error: "Component not found" }, { status: 404 });

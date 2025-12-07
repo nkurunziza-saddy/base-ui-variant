@@ -20,7 +20,7 @@ const NAV_ITEMS: NavItemType[] = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-52 shrink-0 border-r overflow-hidden">
+    <aside className="w-52 shrink-0 border-r border-dashed overflow-hidden">
       <div
         className="h-full overflow-y-auto py-4 px-3"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

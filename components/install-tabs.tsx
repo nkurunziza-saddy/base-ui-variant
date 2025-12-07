@@ -13,7 +13,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/new-york/ui/tabs";
-import { Check, Copy, Terminal, FileCode } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface InstallTabsProps {
@@ -29,6 +29,7 @@ export function InstallTabs({
 }: InstallTabsProps) {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
   const [sourceCode, setSourceCode] = useState<string>("");
+  const [highlightedCode, setHighlightedCode] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [activeMode, setActiveMode] = useState<"cli" | "manual">("cli");
 
@@ -36,9 +37,10 @@ export function InstallTabs({
     if (activeMode === "manual" && !sourceCode) {
       setLoading(true);
       fetch(`/api/component-source?id=${componentId}`)
-        .then((res) => res.text())
-        .then((code) => {
-          setSourceCode(code);
+        .then((res) => res.json())
+        .then((data) => {
+          setSourceCode(data.source);
+          setHighlightedCode(data.highlighted);
           setLoading(false);
         })
         .catch(() => {
@@ -65,7 +67,9 @@ export function InstallTabs({
           onClick={() => setActiveMode("cli")}
           className={cn(
             "pb-1",
-            activeMode === "cli" ? "border-b-2 border-b-primary" : ""
+            activeMode === "cli"
+              ? "border-b-2 border-b-primary"
+              : "border-b-2 border-b-transparent"
           )}
         >
           CLI
@@ -74,7 +78,9 @@ export function InstallTabs({
           onClick={() => setActiveMode("manual")}
           className={cn(
             "pb-1",
-            activeMode === "manual" ? "border-b-2 border-b-primary" : ""
+            activeMode === "manual"
+              ? "border-b-2 border-b-primary"
+              : "border-b-2 border-b-transparent"
           )}
         >
           Manual
@@ -119,7 +125,7 @@ export function InstallTabs({
               <AlertDescription>
                 Install the required dependencies:
               </AlertDescription>
-              <div className="flex items-center gap-2 mt-2">
+              <div className="flex items-center bg-muted/90 border border-input/80 py-1 px-2 rounded-sm gap-2 mt-2">
                 <code className="flex-1 text-sm font-mono">
                   pnpm add {dependencies.join(" ")}
                 </code>
@@ -170,12 +176,16 @@ export function InstallTabs({
             </Button>
           </div>
 
-          {/* Source Code Display */}
-          <div className="relative rounded-lg border bg-muted/40 overflow-hidden">
+          <div className="relative rounded-lg border overflow-hidden">
             {loading ? (
               <div className="flex items-center justify-center py-12">
                 <div className="animate-spin rounded-full h-6 w-6 border-2 border-primary border-t-transparent" />
               </div>
+            ) : highlightedCode ? (
+              <div
+                className="[&_pre]:max-h-[500px] [&_pre]:overflow-auto [&_pre]:p-4 [&_pre]:text-sm [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
+                dangerouslySetInnerHTML={{ __html: highlightedCode }}
+              />
             ) : (
               <pre className="max-h-[500px] overflow-auto p-4">
                 <code className="text-sm font-mono text-foreground whitespace-pre">

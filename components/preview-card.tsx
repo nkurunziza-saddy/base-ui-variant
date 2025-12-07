@@ -7,11 +7,13 @@ import { Check, Copy, Eye, Code } from "lucide-react";
 export function PreviewCard({
   children,
   code,
+  highlightedCode,
   fullWidth = false,
   className,
 }: {
   children: React.ReactNode;
   code?: string;
+  highlightedCode?: string;
   fullWidth?: boolean;
   className?: string;
 }) {
@@ -29,7 +31,7 @@ export function PreviewCard({
   return (
     <div
       className={cn(
-        "group relative w-full overflow-hidden rounded-xl border bg-background shadow-sm",
+        "group relative w-full overflow-hidden rounded-lg border bg-background shadow-sm",
         className
       )}
     >
@@ -41,10 +43,9 @@ export function PreviewCard({
               "flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors",
               activeTab === "preview"
                 ? "border-b-2 border-primary text-foreground"
-                : "text-muted-foreground hover:text-foreground"
+                : "border-b-2 border-b-transparent text-muted-foreground hover:text-foreground"
             )}
           >
-            <Eye className="size-4" />
             Preview
           </button>
           {code && (
@@ -54,10 +55,9 @@ export function PreviewCard({
                 "flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors",
                 activeTab === "code"
                   ? "border-b-2 border-primary text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "border-b-2 border-b-transparent text-muted-foreground hover:text-foreground"
               )}
             >
-              <Code className="size-4" />
               Code
             </button>
           )}
@@ -70,8 +70,8 @@ export function PreviewCard({
           >
             {copied ? (
               <>
-                <Check className="size-3.5 text-green-500" />
-                Copied!
+                <Check className="size-3.5" />
+                Copied
               </>
             ) : (
               <>
@@ -96,11 +96,18 @@ export function PreviewCard({
         </div>
       ) : (
         <div className="relative">
-          <pre className="max-h-[400px] overflow-auto bg-muted/40 p-4">
-            <code className="text-sm font-mono text-foreground whitespace-pre">
-              {code}
-            </code>
-          </pre>
+          {highlightedCode ? (
+            <div
+              className="[&_pre]:max-h-[400px] [&_pre]:overflow-auto [&_pre]:p-4 [&_pre]:text-sm [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
+              dangerouslySetInnerHTML={{ __html: highlightedCode }}
+            />
+          ) : (
+            <pre className="max-h-[400px] overflow-auto bg-muted/40 p-4">
+              <code className="text-sm font-mono text-foreground whitespace-pre">
+                {code}
+              </code>
+            </pre>
+          )}
         </div>
       )}
     </div>

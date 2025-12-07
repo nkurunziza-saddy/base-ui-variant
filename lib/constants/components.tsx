@@ -130,7 +130,7 @@ export const COMPONENTS = [
     },
     dependencies: ["@base-ui-components/react", "class-variance-authority"],
     example: <Button>Click me</Button>,
-    code: `import { Button } from "@/registry/new-york/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 
 export function Demo() {
   return <Button>Click me</Button>;
@@ -177,7 +177,7 @@ export function Demo() {
     },
     dependencies: ["@base-ui-components/react"],
     example: <Input placeholder="Enter text..." />,
-    code: `import { Input } from "@/registry/new-york/ui/input";
+    code: `import { Input } from "@/components/ui/input";
 
 export function Demo() {
   return <Input placeholder="Enter text..." />;
@@ -217,6 +217,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "card" }),
       bun: getInstallCommand({ packageManager: "bun", component: "card" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Card>
         <CardHeader>
@@ -234,7 +235,7 @@ export function Demo() {
   CardTitle,
   CardDescription,
   CardPanel,
-} from "@/registry/new-york/ui/card";
+} from "@/components/ui/card";
 
 export function Demo() {
   return (
@@ -280,8 +281,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "checkbox" }),
       bun: getInstallCommand({ packageManager: "bun", component: "checkbox" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Checkbox />,
-    code: `import { Checkbox } from "@/registry/new-york/ui/checkbox";
+    code: `import { Checkbox } from "@/components/ui/checkbox";
 
 export function Demo() {
   return <Checkbox />;
@@ -324,8 +326,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "switch" }),
       bun: getInstallCommand({ packageManager: "bun", component: "switch" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Switch />,
-    code: `import { Switch } from "@/registry/new-york/ui/switch";
+    code: `import { Switch } from "@/components/ui/switch";
 
 export function Demo() {
   return <Switch />;
@@ -369,8 +372,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "slider" }),
       bun: getInstallCommand({ packageManager: "bun", component: "slider" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Slider className="w-32" />,
-    code: `import { Slider } from "@/registry/new-york/ui/slider";
+    code: `import { Slider } from "@/components/ui/slider";
 
 export function Demo() {
   return <Slider className="w-32" />;
@@ -431,6 +435,7 @@ export function Demo() {
         component: "radio-group",
       }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <RadioGroup defaultValue="next">
         <Label>
@@ -444,8 +449,8 @@ export function Demo() {
         </Label>
       </RadioGroup>
     ),
-    code: `import { Radio, RadioGroup } from "@/registry/new-york/ui/radio-group";
-import { Label } from "@/registry/new-york/ui/label";
+    code: `import { Radio, RadioGroup } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 
 export function Demo() {
   return (
@@ -494,6 +499,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "select" }),
       bun: getInstallCommand({ packageManager: "bun", component: "select" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Select
         items={[
@@ -526,7 +532,7 @@ export function Demo() {
   SelectValue,
   SelectPopup,
   SelectItem,
-} from "@/registry/new-york/ui/select";
+} from "@/components/ui/select";
 
 const items = [
   { label: "Select framework", value: null },
@@ -593,8 +599,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "textarea" }),
       bun: getInstallCommand({ packageManager: "bun", component: "textarea" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Textarea />,
-    code: `import { Textarea } from "@/registry/new-york/ui/textarea";
+    code: `import { Textarea } from "@/components/ui/textarea";
 
 export function Demo() {
   return <Textarea placeholder="Enter your message..." />;
@@ -625,6 +632,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "badge" }),
       bun: getInstallCommand({ packageManager: "bun", component: "badge" }),
     },
+    dependencies: ["class-variance-authority"],
     example: (
       <div className="grid grid-cols-3 gap-2">
         <Badge>Badge</Badge>
@@ -635,7 +643,7 @@ export function Demo() {
         <Badge variant="success">Success</Badge>
       </div>
     ),
-    code: `import { Badge } from "@/registry/new-york/ui/badge";
+    code: `import { Badge } from "@/components/ui/badge";
 
 export function Demo() {
   return (
@@ -679,13 +687,14 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "avatar" }),
       bun: getInstallCommand({ packageManager: "bun", component: "avatar" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Avatar>
         <AvatarImage src="/placeholder-avatar.jpg" />
         <AvatarFallback>JD</AvatarFallback>
       </Avatar>
     ),
-    code: `import { Avatar, AvatarImage, AvatarFallback } from "@/registry/new-york/ui/avatar";
+    code: `import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function Demo() {
   return (
@@ -718,6 +727,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "menu" }),
       bun: getInstallCommand({ packageManager: "bun", component: "menu" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Menu>
         <MenuTrigger>Open</MenuTrigger>
@@ -765,7 +775,7 @@ export function Demo() {
   MenuPopup,
   MenuItem,
   MenuSeparator,
-} from "@/registry/new-york/ui/menu";
+} from "@/components/ui/menu";
 
 export function Demo() {
   return (
@@ -808,6 +818,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "alert" }),
       bun: getInstallCommand({ packageManager: "bun", component: "alert" }),
     },
+    dependencies: ["class-variance-authority"],
     example: (
       <div className="flex flex-col gap-0.5 w-full">
         <Alert>
@@ -825,7 +836,7 @@ export function Demo() {
         </Alert>
       </div>
     ),
-    code: `import { Alert, AlertTitle, AlertDescription } from "@/registry/new-york/ui/alert";
+    code: `import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
 export function Demo() {
   return (
@@ -859,6 +870,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "tabs" }),
       bun: getInstallCommand({ packageManager: "bun", component: "tabs" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Tabs className="w-full" defaultValue="overview">
         <TabsList>
@@ -874,7 +886,7 @@ export function Demo() {
   TabsList,
   TabsTrigger,
   TabsContent,
-} from "@/registry/new-york/ui/tabs";
+} from "@/components/ui/tabs";
 
 export function Demo() {
   return (
@@ -929,6 +941,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "accordion" }),
       bun: getInstallCommand({ packageManager: "bun", component: "accordion" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Accordion className="w-full">
         <AccordionItem value="item-1">
@@ -952,7 +965,7 @@ export function Demo() {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/registry/new-york/ui/accordion";
+} from "@/components/ui/accordion";
 
 export function Demo() {
   return (
@@ -1008,8 +1021,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "separator" }),
       bun: getInstallCommand({ packageManager: "bun", component: "separator" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Separator />,
-    code: `import { Separator } from "@/registry/new-york/ui/separator";
+    code: `import { Separator } from "@/components/ui/separator";
 
 export function Demo() {
   return <Separator />;
@@ -1037,6 +1051,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "sheet" }),
       bun: getInstallCommand({ packageManager: "bun", component: "sheet" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Sheet>
         <SheetTrigger>Open</SheetTrigger>
@@ -1056,7 +1071,7 @@ export function Demo() {
   SheetHeader,
   SheetTitle,
   SheetDescription,
-} from "@/registry/new-york/ui/sheet";
+} from "@/components/ui/sheet";
 
 export function Demo() {
   return (
@@ -1106,8 +1121,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "progress" }),
       bun: getInstallCommand({ packageManager: "bun", component: "progress" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Progress value={33} />,
-    code: `import { Progress } from "@/registry/new-york/ui/progress";
+    code: `import { Progress } from "@/components/ui/progress";
 
 export function Demo() {
   return <Progress value={33} />;
@@ -1147,8 +1163,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "skeleton" }),
       bun: getInstallCommand({ packageManager: "bun", component: "skeleton" }),
     },
+    dependencies: [],
     example: <Skeleton className="w-32 h-4" />,
-    code: `import { Skeleton } from "@/registry/new-york/ui/skeleton";
+    code: `import { Skeleton } from "@/components/ui/skeleton";
 
 export function Demo() {
   return <Skeleton className="w-32 h-4" />;
@@ -1188,6 +1205,7 @@ export function Demo() {
         component: "number-field",
       }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <NumberField>
         <NumberFieldGroup>
@@ -1203,7 +1221,7 @@ export function Demo() {
   NumberFieldDecrement,
   NumberFieldInput,
   NumberFieldIncrement,
-} from "@/registry/new-york/ui/number-field";
+} from "@/components/ui/number-field";
 
 export function Demo() {
   return (
@@ -1256,6 +1274,7 @@ export function Demo() {
         component: "preview-card",
       }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <PreviewCard>
         <PreviewCardTrigger>Hover me</PreviewCardTrigger>
@@ -1268,7 +1287,7 @@ export function Demo() {
   PreviewCard,
   PreviewCardTrigger,
   PreviewCardPopup,
-} from "@/registry/new-york/ui/preview-card";
+} from "@/components/ui/preview-card";
 
 export function Demo() {
   return (
@@ -1301,6 +1320,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "popover" }),
       bun: getInstallCommand({ packageManager: "bun", component: "popover" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Popover>
         <PopoverTrigger>Open</PopoverTrigger>
@@ -1316,7 +1336,7 @@ export function Demo() {
   PopoverPopup,
   PopoverTitle,
   PopoverDescription,
-} from "@/registry/new-york/ui/popover";
+} from "@/components/ui/popover";
 
 export function Demo() {
   return (
@@ -1353,6 +1373,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "dialog" }),
       bun: getInstallCommand({ packageManager: "bun", component: "dialog" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Dialog>
         <DialogTrigger>Open</DialogTrigger>
@@ -1374,7 +1395,7 @@ export function Demo() {
   DialogTitle,
   DialogDescription,
   DialogFooter,
-} from "@/registry/new-york/ui/dialog";
+} from "@/components/ui/dialog";
 
 export function Demo() {
   return (
@@ -1432,6 +1453,7 @@ export function Demo() {
         component: "alert-dialog",
       }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <AlertDialog>
         <AlertDialogTrigger>Delete</AlertDialogTrigger>
@@ -1458,7 +1480,7 @@ export function Demo() {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogClose,
-} from "@/registry/new-york/ui/alert-dialog";
+} from "@/components/ui/alert-dialog";
 
 export function Demo() {
   return (
@@ -1498,6 +1520,7 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "tooltip" }),
       bun: getInstallCommand({ packageManager: "bun", component: "tooltip" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: (
       <Tooltip>
         <TooltipTrigger>Hover me</TooltipTrigger>
@@ -1508,7 +1531,7 @@ export function Demo() {
   Tooltip,
   TooltipTrigger,
   TooltipPopup,
-} from "@/registry/new-york/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 export function Demo() {
   return (
@@ -1542,8 +1565,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "toggle" }),
       bun: getInstallCommand({ packageManager: "bun", component: "toggle" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Toggle>B</Toggle>,
-    code: `import { Toggle } from "@/registry/new-york/ui/toggle";
+    code: `import { Toggle } from "@/components/ui/toggle";
 
 export function Demo() {
   return <Toggle>B</Toggle>;
@@ -1587,8 +1611,9 @@ export function Demo() {
       npm: getInstallCommand({ packageManager: "npm", component: "meter" }),
       bun: getInstallCommand({ packageManager: "bun", component: "meter" }),
     },
+    dependencies: ["@base-ui-components/react"],
     example: <Meter value={30} />,
-    code: `import { Meter } from "@/registry/new-york/ui/meter";
+    code: `import { Meter } from "@/components/ui/meter";
 
 export function Demo() {
   return <Meter value={30} />;
