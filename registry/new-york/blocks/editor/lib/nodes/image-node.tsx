@@ -1,5 +1,4 @@
 import { DecoratorNode } from "lexical";
-import Image from "next/image";
 import type { JSX } from "react";
 
 import type { ImageNodeSerialized } from "../types/editor";
@@ -48,7 +47,7 @@ export class ImageNode extends DecoratorNode<JSX.Element> {
 
   decorate(): JSX.Element {
     return (
-      <Image
+      <img
         alt={this.__alt}
         height={500}
         src={this.__src || "/placeholder.svg"}

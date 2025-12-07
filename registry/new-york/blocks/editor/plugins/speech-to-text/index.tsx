@@ -211,28 +211,23 @@ export default function SpeechToTextPlugin() {
     }
   }, []);
 
-  // Insert text into the editor - simplified and more robust
   const insertTextIntoEditor = useCallback(
     (text: string) => {
       if (!text.trim()) return;
 
       editor.update(() => {
-        // First, ensure we have a valid selection
         let selection = $getSelection();
 
-        // If no selection, create one at the end of the document
         if (!selection || !$isRangeSelection(selection)) {
           const root = $getRoot();
           let lastChild = root.getLastChild();
 
-          // If root is empty, create a paragraph
           if (!lastChild) {
             const paragraph = $createParagraphNode();
             root.append(paragraph);
             lastChild = paragraph;
           }
 
-          // Select at the end
           lastChild.selectEnd();
           selection = $getSelection();
         }
@@ -242,7 +237,6 @@ export default function SpeechToTextPlugin() {
           return;
         }
 
-        // Determine if we're at the start of a sentence
         let isStartOfSentence = true;
         const anchor = selection.anchor;
         const anchorNode = anchor.getNode();
@@ -253,13 +247,11 @@ export default function SpeechToTextPlugin() {
           const textBefore = textContent.slice(0, offset);
           isStartOfSentence = isAtSentenceStart(textBefore);
         } else {
-          // Check if there's any text in the root
           const root = $getRoot();
           const allText = root.getTextContent();
           isStartOfSentence = isAtSentenceStart(allText);
         }
 
-        // Format and insert
         const formattedText = formatTranscript(text, isStartOfSentence);
         const textToInsert = formattedText + " ";
 
@@ -269,7 +261,6 @@ export default function SpeechToTextPlugin() {
     [editor]
   );
 
-  // Handle editor commands (undo/redo)
   const handleEditorCommand = useCallback(
     (command: string): boolean => {
       const lowerCommand = command.toLowerCase().trim();
@@ -293,11 +284,9 @@ export default function SpeechToTextPlugin() {
     [editor]
   );
 
-  // Start recognition safely
   const startRecognition = useCallback(() => {
     if (!recognitionRef.current) return false;
 
-    // Don't start if already running
     if (isRunningRef.current) {
       console.debug("Recognition already running, skipping start");
       return true;
@@ -308,7 +297,6 @@ export default function SpeechToTextPlugin() {
       isRunningRef.current = true;
       return true;
     } catch (error) {
-      // Check if error is because it's already running
       if (error instanceof Error && error.message.includes("already started")) {
         console.debug("Recognition was already started");
         isRunningRef.current = true;
@@ -320,7 +308,6 @@ export default function SpeechToTextPlugin() {
     }
   }, []);
 
-  // Stop recognition safely
   const stopRecognition = useCallback(() => {
     if (!recognitionRef.current) return;
 
@@ -329,14 +316,9 @@ export default function SpeechToTextPlugin() {
 
     try {
       recognitionRef.current.stop();
-    } catch {
-      // Ignore errors when stopping
-    }
-
-    // Note: isRunningRef will be set to false in the onend handler
+    } catch {}
   }, [clearTimeouts]);
 
-  // Initialize speech recognition
   useEffect(() => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -354,9 +336,7 @@ export default function SpeechToTextPlugin() {
     recognition.lang = "en-US";
     recognition.maxAlternatives = 3;
 
-    // Handle results
     recognition.onresult = (event: SpeechRecognitionEvent) => {
-      // Reset silence timeout on any result
       if (silenceTimeoutRef.current) {
         clearTimeout(silenceTimeoutRef.current);
       }
@@ -375,29 +355,23 @@ export default function SpeechToTextPlugin() {
         }
       }
 
-      // Update interim text display
       setInterimText(interimTranscript);
 
-      // Process final transcript
       if (finalTranscript.trim()) {
         setIsProcessing(true);
         setGlobalState(true, true);
 
         const trimmedTranscript = finalTranscript.trim();
 
-        // Check for editor commands first
         if (!handleEditorCommand(trimmedTranscript)) {
-          // Not a command, insert as text
           insertTextIntoEditor(trimmedTranscript);
         }
 
-        // Clear interim after final result
         setInterimText("");
         setIsProcessing(false);
         setGlobalState(globalIsListening, false);
       }
 
-      // Set silence timeout - restart recognition if stuck
       silenceTimeoutRef.current = setTimeout(() => {
         if (shouldBeListeningRef.current && recognitionRef.current) {
           console.debug("Silence timeout - restarting recognition");
@@ -454,15 +428,12 @@ export default function SpeechToTextPlugin() {
       }
     };
 
-    // Handle recognition end - this is where we track actual running state
     recognition.onend = () => {
       console.debug("Recognition ended");
       isRunningRef.current = false;
 
-      // Clear interim text
       setInterimText("");
 
-      // Restart if we should still be listening
       if (shouldBeListeningRef.current) {
         isRestartingRef.current = true;
 
@@ -476,7 +447,6 @@ export default function SpeechToTextPlugin() {
               console.debug("Recognition restarted");
             } catch (error) {
               console.debug("Failed to restart recognition:", error);
-              // If it fails because already running, that's fine
               if (
                 error instanceof Error &&
                 error.message.includes("already started")
@@ -491,7 +461,6 @@ export default function SpeechToTextPlugin() {
           }
         }, 300);
       } else {
-        // Fully stopped
         setIsListening(false);
         setGlobalState(false, false);
       }
@@ -499,7 +468,6 @@ export default function SpeechToTextPlugin() {
 
     recognitionRef.current = recognition;
 
-    // Cleanup
     return () => {
       clearTimeouts();
       shouldBeListeningRef.current = false;
@@ -514,16 +482,13 @@ export default function SpeechToTextPlugin() {
     };
   }, [insertTextIntoEditor, handleEditorCommand, clearTimeouts]);
 
-  // Toggle listening state
   const toggleListening = useCallback(() => {
     if (!recognitionRef.current) return;
 
-    // Check current actual state, not just React state
     const currentlyRunning =
       isRunningRef.current || shouldBeListeningRef.current;
 
     if (!currentlyRunning) {
-      // Starting
       clearTimeouts();
       isRestartingRef.current = false;
       shouldBeListeningRef.current = true;
@@ -542,7 +507,6 @@ export default function SpeechToTextPlugin() {
         setTimeout(() => setStatusMessage(""), 2000);
       }
     } else {
-      // Stopping
       stopRecognition();
       setInterimText("");
       setStatusMessage("");
@@ -551,7 +515,6 @@ export default function SpeechToTextPlugin() {
     }
   }, [clearTimeouts, startRecognition, stopRecognition]);
 
-  // Listen for external toggle events (from toolbar)
   useEffect(() => {
     const handleToggle = () => {
       toggleListening();
@@ -563,7 +526,6 @@ export default function SpeechToTextPlugin() {
     };
   }, [toggleListening]);
 
-  // Sync local state with global state
   useEffect(() => {
     const listener = (state: {
       isListening: boolean;
@@ -584,7 +546,6 @@ export default function SpeechToTextPlugin() {
 
   return createPortal(
     <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2">
-      {/* Status/Interim text display */}
       {(statusMessage || interimText) && (
         <div className="bg-background/95 backdrop-blur-sm border rounded-lg px-3 py-2 shadow-lg max-w-xs">
           {statusMessage && (
@@ -598,7 +559,6 @@ export default function SpeechToTextPlugin() {
         </div>
       )}
 
-      {/* Main button */}
       <Tooltip>
         <TooltipTrigger
           render={
