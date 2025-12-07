@@ -1,18 +1,10 @@
-import {
-  APP_DESCRIPTION,
-  APP_NAME,
-  AUTHOR_URL,
-  GITHUB_URL,
-  TWITTER_URL,
-} from "@/lib/configs";
+import { APP_DESCRIPTION, APP_NAME, GITHUB_URL } from "@/lib/configs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { GithubIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/new-york/ui/button";
-import Sidebar from "@/components/sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: APP_DESCRIPTION,
 };
 
-export default function Home() {
+export default function EditorPage() {
   const components = [
     {
       id: "editor",
@@ -89,154 +89,154 @@ export default function Home() {
 
               <section>
                 <h2 className="text-xl font-bold mb-4">Props</h2>
-                <div className="overflow-x-auto">
+                <div className="rounded-lg border overflow-hidden">
                   <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b">
-                        <th className="text-left py-3 px-4 font-semibold">
+                    <thead className="bg-muted/50">
+                      <tr>
+                        <th className="text-left py-2 px-4 font-medium">
                           Prop
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold">
+                        <th className="text-left py-2 px-4 font-medium">
                           Type
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold">
+                        <th className="text-left py-2 px-4 font-medium">
                           Default
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold">
+                        <th className="text-left py-2 px-4 font-medium">
                           Description
                         </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y">
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           initialValue
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           string
                         </td>
-                        <td className="py-3 px-4 font-mono">undefined</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4">
                           Initial editor state as JSON string
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           placeholder
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           string
                         </td>
-                        <td className="py-3 px-4 font-mono">
+                        <td className="py-2 px-4 font-mono">
                           &quot;Start writing...&quot;
                         </td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4">
                           Placeholder text when editor is empty
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           showToolbar
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           boolean
                         </td>
-                        <td className="py-3 px-4 font-mono">false</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4">
                           Show the top toolbar with formatting options
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           showFloatingToolbar
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           boolean
                         </td>
-                        <td className="py-3 px-4 font-mono">true</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">true</td>
+                        <td className="py-2 px-4">
                           Show floating toolbar when text is selected
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           enableSpeechToText
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           boolean
                         </td>
-                        <td className="py-3 px-4 font-mono">false</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4">
                           Enable speech-to-text dictation feature
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           readOnly
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           boolean
                         </td>
-                        <td className="py-3 px-4 font-mono">false</td>
-                        <td className="py-3 px-4">Make the editor read-only</td>
+                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4">Make the editor read-only</td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           autoFocus
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           boolean
                         </td>
-                        <td className="py-3 px-4 font-mono">false</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4">
                           Auto-focus the editor on mount
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           minHeight
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           string
                         </td>
-                        <td className="py-3 px-4 font-mono">undefined</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4">
                           Minimum height of the editor (e.g., &quot;200px&quot;)
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           maxHeight
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           string
                         </td>
-                        <td className="py-3 px-4 font-mono">undefined</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4">
                           Maximum height of the editor (e.g., &quot;500px&quot;)
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           onChange
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           (value: string) =&gt; void
                         </td>
-                        <td className="py-3 px-4 font-mono">undefined</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4">
                           Callback when editor content changes (JSON string)
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 font-mono text-primary">
+                        <td className="py-2 px-4 font-mono text-primary">
                           plugins
                         </td>
-                        <td className="py-3 px-4 font-mono text-muted-foreground">
+                        <td className="py-2 px-4 font-mono text-muted-foreground">
                           React.ComponentType[]
                         </td>
-                        <td className="py-3 px-4 font-mono">[]</td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-4 font-mono">[]</td>
+                        <td className="py-2 px-4">
                           Custom plugins to extend functionality
                         </td>
                       </tr>

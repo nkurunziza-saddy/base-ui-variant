@@ -31,25 +31,21 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "relative z-0 flex w-fit items-center justify-center gap-x-0.5 text-muted-foreground",
-        "data-[orientation=vertical]:flex-col",
-        variant === "default"
-          ? "rounded bg-muted/80 p-0.5 text-muted-foreground/64"
-          : "data-[orientation=horizontal]:py-1 data-[orientation=vertical]:px-1 *:data-[slot=tabs-trigger]:hover:bg-accent",
+        "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
+        "data-[orientation=vertical]:h-auto data-[orientation=vertical]:flex-col",
+        variant === "underline" &&
+          "h-auto rounded-none bg-transparent shadow-[inset_0_-1px] shadow-border p-0 px-1",
         className
       )}
       {...props}
     >
       {children}
-      <TabsPrimitive.Indicator
-        data-slot="tab-indicator"
-        className={cn(
-          "absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) transition-[width,translate] duration-200 ease-in-out",
-          variant === "underline"
-            ? "z-10 bg-primary data-[orientation=horizontal]:h-0.5 data-[orientation=horizontal]:translate-y-px data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:-translate-x-px"
-            : "-z-1 rounded bg-background dark:bg-accent"
-        )}
-      />
+      {variant === "underline" && (
+        <TabsPrimitive.Indicator
+          data-slot="tab-indicator"
+          className="absolute bottom-0 left-0 z-10 h-0.5 w-(--active-tab-width) translate-x-(--active-tab-left) bg-primary transition-all duration-200 ease-in-out"
+        />
+      )}
     </TabsPrimitive.List>
   );
 }
@@ -59,9 +55,21 @@ function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "flex flex-1 shrink-0 cursor-pointer items-center justify-center rounded border border-transparent text-sm font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-ring data-disabled:pointer-events-none data-disabled:opacity-64 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        "hover:text-muted-foreground data-selected:text-foreground",
-        "gap-1.5 px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1.5)-1px)]",
+        "inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap select-none",
+
+        "transition-[color,box-shadow]",
+
+        "text-foreground dark:text-muted-foreground",
+
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring focus-visible:ring-[3px] focus-visible:outline-1",
+
+        "data-disabled:pointer-events-none data-disabled:opacity-50",
+
+        "data-active:bg-background data-active:shadow-sm",
+        "dark:data-active:text-foreground dark:data-active:border-input/30 dark:data-active:bg-input/30",
+
+        "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+
         "data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start",
         className
       )}
@@ -74,7 +82,11 @@ function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
   return (
     <TabsPrimitive.Panel
       data-slot="tabs-content"
-      className={cn("flex-1 outline-none", className)}
+      className={cn(
+        "flex-1 outline-none",
+        "focus-visible:ring-ring/50 focus-visible:outline-ring focus-visible:ring-[3px] focus-visible:outline-1 focus-visible:rounded-md",
+        className
+      )}
       {...props}
     />
   );

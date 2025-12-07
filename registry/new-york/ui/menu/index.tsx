@@ -34,7 +34,7 @@ function MenuPopup({
         align={align}
         alignOffset={alignOffset}
       >
-        <span className="relative flex origin-(--transform-origin) rounded border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
+        <span className="relative flex origin-(--transform-origin) rounded-sm border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
           <MenuPrimitive.Popup
             data-slot="menu-popup"
             className={cn(
@@ -161,7 +161,7 @@ function MenuShortcut({ className, ...props }: React.ComponentProps<"span">) {
     <span
       data-slot="menu-shortcut"
       className={cn(
-        "ms-auto text-xs tracking-widest text-muted-foreground/64",
+        "ms-auto text-xs tracking-widest text-muted-foreground/72",
         className
       )}
       {...props}

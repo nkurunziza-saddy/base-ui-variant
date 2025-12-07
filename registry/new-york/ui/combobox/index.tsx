@@ -73,7 +73,7 @@ function ComboboxInput({
       {showTrigger && (
         <ComboboxTrigger
           className={cn(
-            "absolute top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-72 transition-opacity outline-none hover:opacity-100 has-[+[data-slot=combobox-clear]]:hidden pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+            "absolute top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-sm border border-transparent opacity-72 transition-opacity outline-none hover:opacity-100 has-[+[data-slot=combobox-clear]]:hidden pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
             sizeValue === "sm" ? "end-0" : "end-0.5"
           )}
         >
@@ -83,7 +83,7 @@ function ComboboxInput({
       {showClear && (
         <ComboboxClear
           className={cn(
-            "absolute top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-72 transition-opacity outline-none hover:opacity-100 has-[+[data-slot=combobox-clear]]:hidden pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+            "absolute top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-sm border border-transparent opacity-72 transition-opacity outline-none hover:opacity-100 has-[+[data-slot=combobox-clear]]:hidden pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
             sizeValue === "sm" ? "end-0" : "end-0.5"
           )}
         >
@@ -125,7 +125,7 @@ function ComboboxPopup({
         sideOffset={sideOffset}
         anchor={chipsRef}
       >
-        <span className="relative flex max-h-full origin-(--transform-origin) rounded border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
+        <span className="relative flex max-h-full origin-(--transform-origin) rounded-sm border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
           <ComboboxPrimitive.Popup
             data-slot="combobox-popup"
             className={cn(
@@ -158,7 +158,7 @@ function ComboboxItem({
     >
       <ComboboxPrimitive.ItemIndicator className="col-start-1">
         <svg
-          xmlns="http://www.w3.org/1500/svg"
+          xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -298,7 +298,7 @@ function ComboboxChips({ className, ...props }: ComboboxPrimitive.Chips.Props) {
       ref={chipsRef}
       data-slot="combobox-chips"
       className={cn(
-        "relative inline-flex min-h-8 w-full flex-wrap gap-1 rounded border border-input bg-background p-1 text-sm outline-none *:min-h-6 focus-within:border-ring focus-within:ring-2 focus-within:ring-ring/50 has-disabled:pointer-events-none has-disabled:opacity-64 has-aria-invalid:border-destructive/36 focus-within:has-aria-invalid:border-destructive/64 focus-within:has-aria-invalid:ring-destructive/16 has-data-[size=lg]:min-h-9 has-data-[size=lg]:*:min-h-7 has-data-[size=sm]:min-h-7 has-data-[size=sm]:*:min-h-5",
+        "relative inline-flex min-h-8 w-full flex-wrap gap-1 rounded-sm border border-input bg-background p-1 text-sm outline-none *:min-h-6 focus-within:border-ring focus-within:ring-2 focus-within:ring-ring/50 has-disabled:pointer-events-none has-disabled:opacity-64 has-aria-invalid:border-destructive/36 focus-within:has-aria-invalid:border-destructive/64 focus-within:has-aria-invalid:ring-destructive/16 has-data-[size=lg]:min-h-9 has-data-[size=lg]:*:min-h-7 has-data-[size=sm]:min-h-7 has-data-[size=sm]:*:min-h-5",
         className
       )}
       {...props}
@@ -310,7 +310,7 @@ function ComboboxChip({ children, ...props }: ComboboxPrimitive.Chip.Props) {
   return (
     <ComboboxPrimitive.Chip
       data-slot="combobox-chip"
-      className="flex items-center rounded-md bg-accent ps-2 text-xs font-medium text-accent-foreground outline-none"
+      className="flex items-center rounded-sm bg-accent ps-2 text-xs font-medium text-accent-foreground outline-none"
       {...props}
     >
       {children}

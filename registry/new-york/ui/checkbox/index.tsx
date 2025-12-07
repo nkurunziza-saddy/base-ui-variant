@@ -8,14 +8,14 @@ function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (
     <CheckboxPrimitive.Root
       className={cn(
-        "relative inline-flex size-4 shrink-0 items-center justify-center rounded-lg border border-input bg-background outline-none focus-visible:ring-1 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-64 aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16",
+        "relative inline-flex size-4 shrink-0 items-center justify-center rounded-sm border border-input bg-background outline-none focus-visible:ring-1 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-64 aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16",
         className
       )}
       data-slot="checkbox"
       {...props}
     >
       <CheckboxPrimitive.Indicator
-        className="absolute -inset-px flex items-center justify-center rounded-lg text-primary-foreground data-checked:bg-primary data-indeterminate:text-foreground data-unchecked:hidden"
+        className="absolute -inset-px flex items-center justify-center rounded-sm text-primary-foreground data-checked:bg-primary data-indeterminate:text-foreground data-unchecked:hidden"
         data-slot="checkbox-indicator"
         render={(props, state) => (
           <span {...props}>

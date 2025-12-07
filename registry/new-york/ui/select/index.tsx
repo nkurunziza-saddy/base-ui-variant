@@ -23,7 +23,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "relative inline-flex w-full min-w-36 items-center justify-between gap-2 rounded border border-input bg-background px-3 py-1.5 text-sm outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 in-data-[slot=field]:not-data-filled:text-muted-foreground aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16 data-disabled:pointer-events-none data-disabled:opacity-64 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "relative inline-flex w-full min-w-36 items-center justify-between gap-2 rounded-sm border border-input bg-background px-2.5 py-1.5 text-sm outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 in-data-[slot=field]:not-data-filled:text-muted-foreground aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16 data-disabled:pointer-events-none data-disabled:opacity-64 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         size === "sm" && "gap-1.5 px-2.5 py-1",
         size === "lg" && "py-2",
         className
@@ -77,7 +77,7 @@ function SelectPopup({
           >
             <ChevronUpIcon className="relative size-4" />
           </SelectPrimitive.ScrollUpArrow>
-          <span className="relative block h-full rounded border bg-popover">
+          <span className="relative block h-full rounded-sm border bg-popover">
             <SelectPrimitive.List
               data-slot="select-list"
               className={cn(
@@ -116,7 +116,7 @@ function SelectItem({
     >
       <SelectPrimitive.ItemIndicator className="col-start-1">
         <svg
-          xmlns="http://www.w3.org/1500/svg"
+          xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 24 24"

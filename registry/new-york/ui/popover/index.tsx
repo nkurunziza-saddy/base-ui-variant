@@ -31,11 +31,11 @@ function PopoverPopup({
         sideOffset={sideOffset}
         align={align}
       >
-        <span className="relative flex origin-(--transform-origin) rounded border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
+        <span className="relative flex origin-(--transform-origin) rounded-sm border bg-popover transition-[scale,opacity] has-data-starting-style:scale-98 has-data-starting-style:opacity-0">
           <PopoverPrimitive.Popup
             data-slot="popover-content"
             className={cn(
-              "max-h-(--available-height) min-w-80 overflow-y-auto p-3",
+              "max-h-(--available-height) min-w-80 overflow-y-auto p-2.5",
               className
             )}
             {...props}

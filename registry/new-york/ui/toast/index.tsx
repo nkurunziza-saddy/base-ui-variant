@@ -72,7 +72,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
             <Toast.Root
               key={toast.id}
               className={cn(
-                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-lg border bg-popover bg-clip-padding px-3.5 py-3 text-popover-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] dark:bg-clip-border dark:before:shadow-[0_-1px_--theme(--color-white/8%)]",
+                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-sm border bg-popover bg-clip-padding px-3 py-2.5 text-popover-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-sm)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] dark:bg-clip-border dark:before:shadow-[0_-1px_--theme(--color-white/8%)]",
                 "data-[position*=right]:right-0 data-[position*=right]:left-auto",
                 "data-[position*=left]:right-auto data-[position*=left]:left-0",
                 "data-[position*=center]:right-0 data-[position*=center]:left-0",
@@ -128,7 +128,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
             <Toast.Root
               toast={toast}
               className={cn(
-                "z-50 w-fit select-none rounded-md border bg-popover bg-clip-padding px-2 py-1 text-xs text-popover-foreground",
+                "z-50 w-fit select-none rounded-sm border bg-popover bg-clip-padding px-2 py-1 text-xs text-popover-foreground",
                 "data-starting-style:opacity-0 data-starting-style:scale-95",
                 "data-ending-style:opacity-0 data-ending-style:scale-95",
                 "transition-all duration-200 ease-out"

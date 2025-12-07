@@ -15,14 +15,14 @@ function Input({
     <span
       data-slot="input-control"
       className={cn(
-        "relative inline-flex w-full rounded border border-input bg-background text-sm has-focus-visible:border-ring has-focus-visible:ring-2 has-focus-visible:ring-ring/50 has-disabled:opacity-64 has-aria-invalid:border-destructive/36 has-focus-visible:has-aria-invalid:border-destructive/64 has-focus-visible:has-aria-invalid:ring-destructive/16",
+        "relative inline-flex w-full rounded-sm border border-input bg-background text-sm has-focus-visible:border-ring has-focus-visible:ring-2 has-focus-visible:ring-ring/50 has-disabled:opacity-64 has-aria-invalid:border-destructive/36 has-focus-visible:has-aria-invalid:border-destructive/64 has-focus-visible:has-aria-invalid:ring-destructive/16",
         className
       )}
     >
       <InputPrimitive
         data-slot="input"
         className={cn(
-          "w-full min-w-0 rounded-[inherit] px-3 py-1.5 outline-none placeholder:text-muted-foreground/64",
+          "w-full min-w-0 rounded-[inherit] px-2.5 py-1.5 outline-none placeholder:text-muted-foreground/72",
           size === "sm" && "px-2.5 py-1",
           size === "lg" && "py-2",
           props.type === "search" &&

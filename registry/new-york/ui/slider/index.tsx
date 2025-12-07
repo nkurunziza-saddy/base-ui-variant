@@ -52,7 +52,7 @@ function Slider({
           />
           {Array.from({ length: _values.length }, (_, index) => (
             <SliderPrimitive.Thumb
-              className="block size-4 shrink-0 rounded-full border border-input bg-white outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/50 data-dragging:ring-2 data-dragging:ring-ring/50"
+              className="block size-4 shrink-0 rounded-full border-2 border-primary bg-background outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/50 data-dragging:ring-2 data-dragging:ring-ring/50"
               data-slot="slider-thumb"
               key={index}
             />

@@ -51,7 +51,7 @@ function DialogPopup({
           <DialogPrimitive.Popup
             data-slot="dialog-popup"
             className={cn(
-              "row-start-2 grid w-full min-w-0 origin-top gap-4 border bg-popover p-4 text-popover-foreground transition-[scale,opacity,translate] duration-200 ease-in-out will-change-transform data-ending-style:opacity-0 data-starting-style:opacity-0 max-sm:overflow-y-auto max-sm:border-none max-sm:opacity-[calc(1-min(var(--nested-dialogs),1))] max-sm:data-ending-style:translate-y-4 max-sm:data-starting-style:translate-y-4 sm:max-w-lg sm:-translate-y-[calc(1.25rem*var(--nested-dialogs))] sm:scale-[calc(1-0.1*var(--nested-dialogs))] sm:rounded sm:data-ending-style:scale-98 sm:data-starting-style:scale-98",
+              "row-start-2 grid w-full min-w-0 origin-top gap-3 border bg-popover p-3 text-popover-foreground transition-[scale,opacity,translate] duration-200 ease-in-out will-change-transform data-ending-style:opacity-0 data-starting-style:opacity-0 max-sm:overflow-y-auto max-sm:border-none max-sm:opacity-[calc(1-min(var(--nested-dialogs),1))] max-sm:data-ending-style:translate-y-4 max-sm:data-starting-style:translate-y-4 sm:max-w-lg sm:-translate-y-[calc(1.25rem*var(--nested-dialogs))] sm:scale-[calc(1-0.1*var(--nested-dialogs))] sm:rounded-sm sm:data-ending-style:scale-98 sm:data-starting-style:scale-98",
               "sm:data-nested:data-ending-style:translate-y-8 sm:data-nested:data-starting-style:translate-y-8",
               className
             )}
@@ -59,7 +59,7 @@ function DialogPopup({
           >
             {children}
             {showCloseButton && (
-              <DialogPrimitive.Close className="absolute end-2 top-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-72 transition-[color,background-color,opacity] outline-none hover:opacity-100 focus-visible:ring-1 focus-visible:ring-ring/50 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
+              <DialogPrimitive.Close className="absolute end-2 top-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-sm border border-transparent opacity-72 transition-[color,background-color,opacity] outline-none hover:opacity-100 focus-visible:ring-1 focus-visible:ring-ring/50 pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
                 <XIcon />
                 <span className="sr-only">Close</span>
               </DialogPrimitive.Close>
