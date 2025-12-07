@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/new-york/ui/form/index.tsx",
-      "content": "\"use client\";\n\nimport { Form as FormPrimitive } from \"@base-ui-components/react/form\";\n\nimport { cn } from \"@/registry/new-york/libs/utils\";\n\nfunction Form({ className, ...props }: FormPrimitive.Props) {\n  return (\n    <FormPrimitive\n      data-slot=\"form\"\n      className={cn(\"flex w-full flex-col gap-4\", className)}\n      {...props}\n    />\n  );\n}\n\nexport { Form };\n",
+      "content": "\"use client\";\n\nimport { Form as FormPrimitive } from \"@base-ui-components/react/form\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Form({ className, ...props }: FormPrimitive.Props) {\n  return (\n    <FormPrimitive\n      data-slot=\"form\"\n      className={cn(\"flex w-full flex-col gap-4\", className)}\n      {...props}\n    />\n  );\n}\n\nexport { Form };\n",
       "type": "registry:ui",
       "target": "components/ui/form.tsx"
     }
