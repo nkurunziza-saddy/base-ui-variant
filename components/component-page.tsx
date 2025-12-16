@@ -26,7 +26,7 @@ export async function ComponentPage({
         </p>
       </div>
 
-      <section>
+      <section id="preview">
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Preview
         </h2>
@@ -39,7 +39,7 @@ export async function ComponentPage({
         </PreviewCard>
       </section>
 
-      <section>
+      <section id="installation">
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Installation
         </h2>
@@ -50,7 +50,7 @@ export async function ComponentPage({
         />
       </section>
 
-      <section>
+      <section id="usage">
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Usage
         </h2>
@@ -66,7 +66,7 @@ export async function ComponentPage({
       </section>
 
       {component.props && component.props.length > 0 && (
-        <section>
+        <section id="key-props">
           <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
             Key Props
           </h2>
@@ -102,7 +102,10 @@ export async function ComponentPage({
         </section>
       )}
 
-      <section className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4">
+      <section
+        id="tips"
+        className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4"
+      >
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Tips
         </h2>

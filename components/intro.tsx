@@ -18,7 +18,9 @@ export function IntroductionPage() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">What is this?</h2>
+        <h2 id="what-is-this" className="text-xl font-semibold">
+          What is this?
+        </h2>
         <p className="text-muted-foreground leading-relaxed">
           This is a <strong className="text-foreground">Base UI variant</strong>{" "}
           of the popular shadcn/ui component library. While shadcn/ui uses Radix
@@ -36,7 +38,9 @@ export function IntroductionPage() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Why Base UI?</h2>
+        <h2 id="why-base-ui" className="text-xl font-semibold">
+          Why Base UI?
+        </h2>
         <ul className="space-y-3 text-muted-foreground">
           <li className="flex items-start gap-3">
             <span className="text-primary mt-1">•</span>
@@ -72,7 +76,9 @@ export function IntroductionPage() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Credits</h2>
+        <h2 id="credits" className="text-xl font-semibold">
+          Credits
+        </h2>
         <p className="text-muted-foreground leading-relaxed">
           Inspired by{" "}
           <a

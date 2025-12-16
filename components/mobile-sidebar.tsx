@@ -34,7 +34,7 @@ export function MobileSidebar() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex items-center gap-2 text-sm font-medium">
         <Menu className="size-5" />
-        <span>Menu</span>
+        <span>Open menu</span>
       </SheetTrigger>
       <SheetContent
         side="left"
