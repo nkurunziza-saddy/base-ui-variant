@@ -49,9 +49,9 @@ export function DesktopTableOfContents() {
   };
 
   return (
-    <aside className="w-full shrink-0 py-8 px-4">
+    <aside className="w-44 shrink-0 py-6 pr-3">
       <div className="sticky top-8">
-        <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+        <h4 className="text-xs px-3 font-semibold text-muted-foreground uppercase tracking-wider mb-3">
           On this page
         </h4>
         <nav className="space-y-1">
@@ -59,7 +59,7 @@ export function DesktopTableOfContents() {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="block w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors py-1 border-l-2 border-transparent hover:border-primary pl-3"
+              className="block w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors py-1 border-l-2 border-transparent hover:border-primary/15 pl-3"
             >
               {item.title}
             </button>

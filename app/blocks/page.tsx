@@ -20,7 +20,7 @@ const blocks = [
 export default function BlocksPage() {
   return (
     <div className="min-h-screen">
-      <div className="cpx py-8">
+      <div className="btnb py-8">
         <div className="max-w-3xl mb-8">
           <p className="text-lg text-muted-foreground">Current blocks</p>
         </div>

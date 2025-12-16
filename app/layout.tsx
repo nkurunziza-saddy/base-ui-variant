@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <div className="relative text-foreground/85 flex min-h-screen flex-col overflow-hidden bg-secondary/40 supports-[overflow:clip]:overflow-clip dark:bg-background">
           <header className="border-b border-dashed bg-card dark:bg-card/50">
-            <div className="cpx container flex h-14 items-center justify-between py-2">
+            <div className="btnb container flex h-14 items-center justify-between py-2">
               <div className="flex gap-10">
                 <Link className="" href="/">
                   <span className="font-medium">Uruhuu</span>

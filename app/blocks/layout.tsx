@@ -15,14 +15,14 @@ export default function BlocksLayout({
 }>) {
   return (
     <div className="">
-      <div className="cpx space-y-2 py-5">
+      <div className="btnb space-y-2 py-5">
         <h1 className="font-bold font-heading text-4xl">Blocks</h1>
         <p className="text-muted-foreground text-sm">
           Compiled blocks for your design system.
         </p>
       </div>
       <BorderSeparator />
-      <div className="cpx space-y-2 py-5">
+      <div className="btnb space-y-2 py-5">
         <div className="flex flex-wrap gap-5">
           <Link href={"/blocks"}>Featured</Link>
           <Link href={"/blocks/editor"}>Text editor</Link>

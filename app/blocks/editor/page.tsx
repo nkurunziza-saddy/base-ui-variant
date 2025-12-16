@@ -45,7 +45,7 @@ export default function EditorPage() {
       <div className="grid grid-cols-1 gap-6 py-5">
         {components.map((component) => (
           <div className="flex gap-2 flex-col" key={component.id}>
-            <div className="cpx space-y-2 pb-5">
+            <div className="btnb space-y-2 pb-5">
               <h1 className="font-medium font-heading text-2xl">
                 {component.name}
               </h1>
@@ -53,10 +53,10 @@ export default function EditorPage() {
             </div>
 
             <FixedBorderSeparator />
-            <div className="cpx flex-1">
+            <div className="btnb flex-1">
               {component.examples.map((example) => {
                 return (
-                  <div className="cpx space-y-2 py-5" key={example.title}>
+                  <div className="btnb space-y-2 py-5" key={example.title}>
                     <h3 className="text-lg font-bold">{example.title}</h3>
                     <p className="text-muted-foreground">
                       {example.description}
@@ -68,7 +68,7 @@ export default function EditorPage() {
             </div>
 
             <FixedBorderSeparator />
-            <div className="cpx py-8 space-y-8">
+            <div className="btnb py-8 space-y-8">
               <section>
                 <h2 className="text-xl font-bold mb-4">Usage</h2>
                 <HighlightCodeBlock
