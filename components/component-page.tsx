@@ -2,7 +2,7 @@ import { PreviewCard } from "./preview-card";
 import { InstallTabs } from "./install-tabs";
 import { COMPONENTS } from "@/lib/constants/components";
 import { codeToHtml } from "shiki";
-import { HighlightCodeBlock } from "./code-block";
+import { HighlightCodeBlock, HighlightCodeText } from "./code-block";
 
 export async function ComponentPage({
   component,
@@ -82,14 +82,15 @@ export async function ComponentPage({
                 </tr>
               </thead>
               <tbody className="divide-y">
-                {component.props.map((prop) => (
+                {component.props.map(async (prop) => (
                   <tr key={prop.name}>
                     <td className="px-4 py-2 font-mono text-xs text-primary">
                       {prop.name}
                     </td>
                     <td className="px-4 py-2 font-mono text-xs text-muted-foreground">
-                      {prop.type}
+                      <HighlightCodeText code={prop.type} language="ts" />
                     </td>
+
                     <td className="px-4 py-2 text-muted-foreground">
                       {prop.description}
                     </td>
@@ -101,34 +102,34 @@ export async function ComponentPage({
         </section>
       )}
 
-      <section>
+      <section className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4">
         <h2 className="text-sm font-semibold mb-3 text-muted-foreground tracking-wide">
           Tips
         </h2>
-        <ul className="text-sm text-muted-foreground space-y-2.5">
+        <ul className="text-sm text-muted-foreground space-y-2">
           {component.tips && component.tips.length > 0 ? (
             component.tips.map((tip, index) => (
-              <li key={index} className="flex items-start gap-2.5">
-                <span className="text-primary mt-0.5">•</span>
+              <li key={index} className="flex items-center gap-2">
+                <span className="text-primary">•</span>
                 <span>{tip}</span>
               </li>
             ))
           ) : (
             <>
-              <li className="flex items-start gap-2.5">
-                <span className="text-primary mt-0.5">•</span>
+              <li className="flex items-center gap-2">
+                <span className="text-primary">•</span>
                 <span>
                   Built with Base UI — fully accessible and keyboard navigable.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-primary mt-0.5">•</span>
+              <li className="flex items-center gap-2">
+                <span className="text-primary">•</span>
                 <span>
                   Customize styles by modifying the component file directly.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-primary mt-0.5">•</span>
+              <li className="flex items-center gap-2">
+                <span className="text-primary">•</span>
                 <span>
                   Check the component source for all available props and
                   variants.

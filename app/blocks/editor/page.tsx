@@ -4,7 +4,7 @@ import { Editor } from "@/registry/new-york/blocks/editor";
 import { FixedBorderSeparator } from "@/registry/new-york/ui/border-separator";
 import type { Metadata } from "next";
 import { CopyButton } from "../copy-button";
-import { HighlightCodeBlock } from "@/components/code-block";
+import { HighlightCodeBlock, HighlightCodeText } from "@/components/code-block";
 
 export const metadata: Metadata = {
   title: `Editor Block - ${APP_NAME}`,
@@ -115,9 +115,12 @@ export default function EditorPage() {
                           initialValue
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          string
+                          <HighlightCodeText code={"string"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"undefined"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Initial editor state as JSON string
                         </td>
@@ -127,7 +130,7 @@ export default function EditorPage() {
                           placeholder
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          string
+                          <HighlightCodeText code={"string"} language="ts" />
                         </td>
                         <td className="py-2 px-4 font-mono">
                           &quot;Start writing...&quot;
@@ -141,9 +144,12 @@ export default function EditorPage() {
                           showToolbar
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          boolean
+                          <HighlightCodeText code={"boolean"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"false"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Show the top toolbar with formatting options
                         </td>
@@ -153,9 +159,12 @@ export default function EditorPage() {
                           showFloatingToolbar
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          boolean
+                          <HighlightCodeText code={"boolean"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">true</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"true"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Show floating toolbar when text is selected
                         </td>
@@ -165,9 +174,12 @@ export default function EditorPage() {
                           enableSpeechToText
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          boolean
+                          <HighlightCodeText code={"boolean"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"false"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Enable speech-to-text dictation feature
                         </td>
@@ -177,9 +189,12 @@ export default function EditorPage() {
                           readOnly
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          boolean
+                          <HighlightCodeText code={"boolean"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"false"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">Make the editor read-only</td>
                       </tr>
                       <tr>
@@ -187,9 +202,12 @@ export default function EditorPage() {
                           autoFocus
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          boolean
+                          <HighlightCodeText code={"boolean"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">false</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"false"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Auto-focus the editor on mount
                         </td>
@@ -199,9 +217,12 @@ export default function EditorPage() {
                           minHeight
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          string
+                          <HighlightCodeText code={"string"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"undefined"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Minimum height of the editor (e.g., &quot;200px&quot;)
                         </td>
@@ -211,9 +232,12 @@ export default function EditorPage() {
                           maxHeight
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          string
+                          <HighlightCodeText code={"string"} language="ts" />
                         </td>
-                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"undefined"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Maximum height of the editor (e.g., &quot;500px&quot;)
                         </td>
@@ -223,9 +247,15 @@ export default function EditorPage() {
                           onChange
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          (value: string) =&gt; void
+                          <HighlightCodeText
+                            code={"(value: string) => void"}
+                            language="ts"
+                          />
                         </td>
-                        <td className="py-2 px-4 font-mono">undefined</td>
+                        <td className="py-2 px-4 font-mono">
+                          {" "}
+                          <HighlightCodeText code={"undefined"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Callback when editor content changes (JSON string)
                         </td>
@@ -235,9 +265,14 @@ export default function EditorPage() {
                           plugins
                         </td>
                         <td className="py-2 px-4 font-mono text-muted-foreground">
-                          React.ComponentType[]
+                          <HighlightCodeText
+                            code={"React.ComponentType[]"}
+                            language="ts"
+                          />
                         </td>
-                        <td className="py-2 px-4 font-mono">[]</td>
+                        <td className="py-2 px-4 font-mono">
+                          <HighlightCodeText code={"[]"} language="ts" />
+                        </td>
                         <td className="py-2 px-4">
                           Custom plugins to extend functionality
                         </td>

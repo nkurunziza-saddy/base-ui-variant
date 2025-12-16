@@ -86,8 +86,6 @@ declare global {
   }
 }
 
-// ==================== Voice Commands ====================
-
 const VOICE_COMMANDS: Record<string, string> = {
   "new line": "\n",
   newline: "\n",

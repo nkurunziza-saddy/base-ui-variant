@@ -43,16 +43,16 @@ function Slider({
         data-slot="slider-control"
       >
         <SliderPrimitive.Track
-          className="relative grow select-none bg-input data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1"
+          className="relative grow select-none bg-input data-[orientation=horizontal]:h-3 data-[orientation=horizontal]:w-full rounded-xs data-[orientation=vertical]:h-full data-[orientation=vertical]:w-3"
           data-slot="slider-track"
         >
           <SliderPrimitive.Indicator
-            className="rounded-full bg-primary select-none data-[orientation=horizontal]:ms-0.5 data-[orientation=vertical]:mb-0.5"
+            className="rounded-xs bg-primary select-none data-[orientation=horizontal]:ms-0.5 data-[orientation=vertical]:mb-0.5"
             data-slot="slider-indicator"
           />
           {Array.from({ length: _values.length }, (_, index) => (
             <SliderPrimitive.Thumb
-              className="block size-4 shrink-0 rounded-full border-2 border-primary bg-background outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/50 data-dragging:ring-2 data-dragging:ring-ring/50"
+              className="block size-4 shrink-0 rounded-xs border-2 border-primary bg-background outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/50 data-dragging:ring-2 data-dragging:ring-ring/50"
               data-slot="slider-thumb"
               key={index}
             />

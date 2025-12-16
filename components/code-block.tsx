@@ -40,3 +40,20 @@ export async function HighlightCodeBlock({
     />
   );
 }
+
+export async function HighlightCodeText({
+  code,
+  language = "tsx",
+}: CodeBlockProps) {
+  return (
+    <p
+      className="overflow-hidden [&_pre]:p-0 [&_pre]:text-inherit [&_pre]:leading-relaxed [&_pre]:bg-transparent! [&_code]:font-mono"
+      dangerouslySetInnerHTML={{
+        __html: await codeToHtml(code, {
+          lang: language,
+          theme: "vitesse-dark",
+        }),
+      }}
+    />
+  );
+}
